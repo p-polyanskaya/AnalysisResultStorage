@@ -1,0 +1,12 @@
+/Users/polina/RiderProjects/AnalysisResultStorage/Migration/bin/Debug/net7.0/Migration.deps.json
+/Users/polina/RiderProjects/AnalysisResultStorage/Migration/bin/Debug/net7.0/Migration.dll
+/Users/polina/RiderProjects/AnalysisResultStorage/Migration/bin/Debug/net7.0/Migration.pdb
+/Users/polina/RiderProjects/AnalysisResultStorage/Migration/obj/Debug/net7.0/Migration.csproj.AssemblyReference.cache
+/Users/polina/RiderProjects/AnalysisResultStorage/Migration/obj/Debug/net7.0/Migration.GeneratedMSBuildEditorConfig.editorconfig
+/Users/polina/RiderProjects/AnalysisResultStorage/Migration/obj/Debug/net7.0/Migration.AssemblyInfoInputs.cache
+/Users/polina/RiderProjects/AnalysisResultStorage/Migration/obj/Debug/net7.0/Migration.AssemblyInfo.cs
+/Users/polina/RiderProjects/AnalysisResultStorage/Migration/obj/Debug/net7.0/Migration.csproj.CoreCompileInputs.cache
+/Users/polina/RiderProjects/AnalysisResultStorage/Migration/obj/Debug/net7.0/Migration.dll
+/Users/polina/RiderProjects/AnalysisResultStorage/Migration/obj/Debug/net7.0/refint/Migration.dll
+/Users/polina/RiderProjects/AnalysisResultStorage/Migration/obj/Debug/net7.0/Migration.pdb
+/Users/polina/RiderProjects/AnalysisResultStorage/Migration/obj/Debug/net7.0/ref/Migration.dll

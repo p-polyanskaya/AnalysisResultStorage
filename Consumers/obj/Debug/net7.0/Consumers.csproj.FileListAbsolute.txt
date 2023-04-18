@@ -1,0 +1,17 @@
+/Users/polina/RiderProjects/AnalysisResultStorage/Consumers/bin/Debug/net7.0/Consumers.deps.json
+/Users/polina/RiderProjects/AnalysisResultStorage/Consumers/bin/Debug/net7.0/Consumers.dll
+/Users/polina/RiderProjects/AnalysisResultStorage/Consumers/bin/Debug/net7.0/Consumers.pdb
+/Users/polina/RiderProjects/AnalysisResultStorage/Consumers/bin/Debug/net7.0/Application.dll
+/Users/polina/RiderProjects/AnalysisResultStorage/Consumers/bin/Debug/net7.0/Domain.dll
+/Users/polina/RiderProjects/AnalysisResultStorage/Consumers/bin/Debug/net7.0/Application.pdb
+/Users/polina/RiderProjects/AnalysisResultStorage/Consumers/bin/Debug/net7.0/Domain.pdb
+/Users/polina/RiderProjects/AnalysisResultStorage/Consumers/obj/Debug/net7.0/Consumers.csproj.AssemblyReference.cache
+/Users/polina/RiderProjects/AnalysisResultStorage/Consumers/obj/Debug/net7.0/Consumers.GeneratedMSBuildEditorConfig.editorconfig
+/Users/polina/RiderProjects/AnalysisResultStorage/Consumers/obj/Debug/net7.0/Consumers.AssemblyInfoInputs.cache
+/Users/polina/RiderProjects/AnalysisResultStorage/Consumers/obj/Debug/net7.0/Consumers.AssemblyInfo.cs
+/Users/polina/RiderProjects/AnalysisResultStorage/Consumers/obj/Debug/net7.0/Consumers.csproj.CoreCompileInputs.cache
+/Users/polina/RiderProjects/AnalysisResultStorage/Consumers/obj/Debug/net7.0/Consumers.csproj.CopyComplete
+/Users/polina/RiderProjects/AnalysisResultStorage/Consumers/obj/Debug/net7.0/Consumers.dll
+/Users/polina/RiderProjects/AnalysisResultStorage/Consumers/obj/Debug/net7.0/refint/Consumers.dll
+/Users/polina/RiderProjects/AnalysisResultStorage/Consumers/obj/Debug/net7.0/Consumers.pdb
+/Users/polina/RiderProjects/AnalysisResultStorage/Consumers/obj/Debug/net7.0/ref/Consumers.dll
