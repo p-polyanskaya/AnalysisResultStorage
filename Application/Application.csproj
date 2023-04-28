@@ -14,6 +14,8 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Domain\Domain.csproj" />
+      <ProjectReference Include="..\Metrics\Metrics.csproj" />
+      <ProjectReference Include="..\Options\Options.csproj" />
     </ItemGroup>
 
 </Project>

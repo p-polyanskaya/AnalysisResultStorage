@@ -25,62 +25,47 @@ namespace GrpcServices {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiRwcm90b3MvYW5hbHlzaXNfcmVzdWx0X3N0b3JhZ2UucHJvdG8SD2FuYWx5",
-            "c2lzX3Jlc3VsdBofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byKs",
-            "AQojR2V0QW5hbHlzaXNSZXN1bHRCeURhdGVSYW5nZVJlcXVlc3QSMQoEdHlw",
-            "ZRgBIAEoDjIjLmFuYWx5c2lzX3Jlc3VsdC5BbmFseXNpc1Jlc3VsdFR5cGUS",
-            "KQoFc3RhcnQYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEicK",
-            "A2VuZBgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAiVwokR2V0",
-            "QW5hbHlzaXNSZXN1bHRCeURhdGVSYW5nZVJlc3BvbnNlEi8KB3Jlc3VsdHMY",
-            "ASADKAsyHi5hbmFseXNpc19yZXN1bHQuQW5hbHlzZVJlc3VsdCJlCiBHZXRB",
-            "bmFseXNpc1Jlc3VsdEJ5U291cmNlUmVxdWVzdBIxCgR0eXBlGAEgASgOMiMu",
-            "YW5hbHlzaXNfcmVzdWx0LkFuYWx5c2lzUmVzdWx0VHlwZRIOCgZzb3VyY2UY",
-            "AiABKAkiVAohR2V0QW5hbHlzaXNSZXN1bHRCeVNvdXJjZVJlc3BvbnNlEi8K",
-            "B3Jlc3VsdHMYASADKAsyHi5hbmFseXNpc19yZXN1bHQuQW5hbHlzZVJlc3Vs",
-            "dCJpCiJHZXRBbmFseXNpc1Jlc3VsdEJ5VXNlck5hbWVSZXF1ZXN0EjEKBHR5",
-            "cGUYASABKA4yIy5hbmFseXNpc19yZXN1bHQuQW5hbHlzaXNSZXN1bHRUeXBl",
-            "EhAKCHVzZXJOYW1lGAIgASgJIlYKI0dldEFuYWx5c2lzUmVzdWx0QnlVc2Vy",
-            "TmFtZVJlc3BvbnNlEi8KB3Jlc3VsdHMYASADKAsyHi5hbmFseXNpc19yZXN1",
-            "bHQuQW5hbHlzZVJlc3VsdCLFAQoNQW5hbHlzZVJlc3VsdBIKCgJpZBgBIAEo",
-            "CRIQCgh1c2VyTmFtZRgCIAEoCRIxCg10aW1lT2ZNZXNzYWdlGAMgASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBITCgttZXNzYWdlVGV4dBgEIAEo",
-            "CRIOCgZzb3VyY2UYBSABKAkSGwoTaXNTdXNwaWNpb3VzTWVzc2FnZRgGIAEo",
-            "CBIhChlhbmFseXNpc1Jlc3VsdERlc2NyaXB0aW9uGAcgASgJKk4KEkFuYWx5",
-            "c2lzUmVzdWx0VHlwZRIVChFTdXNwaWNpb3VzTWVzc2FnZRAAEhgKFE5vdFN1",
-            "c3BpY2lvdXNNZXNzYWdlEAESBwoDQWxsEAIytwMKF0FuYWx5c2lzUmVzdWx0",
-            "T3BlcmF0aW9uEosBChxHZXRBbmFseXNpc1Jlc3VsdEJ5RGF0ZVJhbmdlEjQu",
-            "YW5hbHlzaXNfcmVzdWx0LkdldEFuYWx5c2lzUmVzdWx0QnlEYXRlUmFuZ2VS",
-            "ZXF1ZXN0GjUuYW5hbHlzaXNfcmVzdWx0LkdldEFuYWx5c2lzUmVzdWx0QnlE",
-            "YXRlUmFuZ2VSZXNwb25zZRKCAQoZR2V0QW5hbHlzaXNSZXN1bHRCeVNvdXJj",
-            "ZRIxLmFuYWx5c2lzX3Jlc3VsdC5HZXRBbmFseXNpc1Jlc3VsdEJ5U291cmNl",
-            "UmVxdWVzdBoyLmFuYWx5c2lzX3Jlc3VsdC5HZXRBbmFseXNpc1Jlc3VsdEJ5",
-            "U291cmNlUmVzcG9uc2USiAEKG0dldEFuYWx5c2lzUmVzdWx0QnlVc2VyTmFt",
-            "ZRIzLmFuYWx5c2lzX3Jlc3VsdC5HZXRBbmFseXNpc1Jlc3VsdEJ5VXNlck5h",
-            "bWVSZXF1ZXN0GjQuYW5hbHlzaXNfcmVzdWx0LkdldEFuYWx5c2lzUmVzdWx0",
-            "QnlVc2VyTmFtZVJlc3BvbnNlQg+qAgxHcnBjU2VydmljZXNiBnByb3RvMw=="));
+            "c2lzX3Jlc3VsdBofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byKX",
+            "AQojR2V0QW5hbHlzaXNSZXN1bHRCeURhdGVSYW5nZVJlcXVlc3QSKQoFc3Rh",
+            "cnQYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEicKA2VuZBgC",
+            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASEgoFdG9waWMYAyAB",
+            "KAlIAIgBAUIICgZfdG9waWMiVwokR2V0QW5hbHlzaXNSZXN1bHRCeURhdGVS",
+            "YW5nZVJlc3BvbnNlEi8KB3Jlc3VsdHMYASADKAsyHi5hbmFseXNpc19yZXN1",
+            "bHQuQW5hbHlzZVJlc3VsdCIyCiBHZXRBbmFseXNpc1Jlc3VsdEJ5U291cmNl",
+            "UmVxdWVzdBIOCgZzb3VyY2UYASABKAkiVAohR2V0QW5hbHlzaXNSZXN1bHRC",
+            "eVNvdXJjZVJlc3BvbnNlEi8KB3Jlc3VsdHMYASADKAsyHi5hbmFseXNpc19y",
+            "ZXN1bHQuQW5hbHlzZVJlc3VsdCIyCiBHZXRBbmFseXNpc1Jlc3VsdEJ5QXV0",
+            "aG9yUmVxdWVzdBIOCgZhdXRob3IYASABKAkiVAohR2V0QW5hbHlzaXNSZXN1",
+            "bHRCeUF1dGhvclJlc3BvbnNlEi8KB3Jlc3VsdHMYASADKAsyHi5hbmFseXNp",
+            "c19yZXN1bHQuQW5hbHlzZVJlc3VsdCKLAQoNQW5hbHlzZVJlc3VsdBIKCgJp",
+            "ZBgBIAEoCRIOCgZhdXRob3IYAiABKAkSMQoNdGltZU9mTWVzc2FnZRgDIAEo",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASDAoEdGV4dBgEIAEoCRIO",
+            "CgZzb3VyY2UYBSABKAkSDQoFdG9waWMYBiABKAkysQMKF0FuYWx5c2lzUmVz",
+            "dWx0T3BlcmF0aW9uEosBChxHZXRBbmFseXNpc1Jlc3VsdEJ5RGF0ZVJhbmdl",
+            "EjQuYW5hbHlzaXNfcmVzdWx0LkdldEFuYWx5c2lzUmVzdWx0QnlEYXRlUmFu",
+            "Z2VSZXF1ZXN0GjUuYW5hbHlzaXNfcmVzdWx0LkdldEFuYWx5c2lzUmVzdWx0",
+            "QnlEYXRlUmFuZ2VSZXNwb25zZRKCAQoZR2V0QW5hbHlzaXNSZXN1bHRCeVNv",
+            "dXJjZRIxLmFuYWx5c2lzX3Jlc3VsdC5HZXRBbmFseXNpc1Jlc3VsdEJ5U291",
+            "cmNlUmVxdWVzdBoyLmFuYWx5c2lzX3Jlc3VsdC5HZXRBbmFseXNpc1Jlc3Vs",
+            "dEJ5U291cmNlUmVzcG9uc2USggEKGUdldEFuYWx5c2lzUmVzdWx0QnlBdXRo",
+            "b3ISMS5hbmFseXNpc19yZXN1bHQuR2V0QW5hbHlzaXNSZXN1bHRCeUF1dGhv",
+            "clJlcXVlc3QaMi5hbmFseXNpc19yZXN1bHQuR2V0QW5hbHlzaXNSZXN1bHRC",
+            "eUF1dGhvclJlc3BvbnNlQg+qAgxHcnBjU2VydmljZXNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::GrpcServices.AnalysisResultType), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcServices.GetAnalysisResultByDateRangeRequest), global::GrpcServices.GetAnalysisResultByDateRangeRequest.Parser, new[]{ "Type", "Start", "End" }, null, null, null, null),
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcServices.GetAnalysisResultByDateRangeRequest), global::GrpcServices.GetAnalysisResultByDateRangeRequest.Parser, new[]{ "Start", "End", "Topic" }, new[]{ "Topic" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcServices.GetAnalysisResultByDateRangeResponse), global::GrpcServices.GetAnalysisResultByDateRangeResponse.Parser, new[]{ "Results" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcServices.GetAnalysisResultBySourceRequest), global::GrpcServices.GetAnalysisResultBySourceRequest.Parser, new[]{ "Type", "Source" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcServices.GetAnalysisResultBySourceRequest), global::GrpcServices.GetAnalysisResultBySourceRequest.Parser, new[]{ "Source" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcServices.GetAnalysisResultBySourceResponse), global::GrpcServices.GetAnalysisResultBySourceResponse.Parser, new[]{ "Results" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcServices.GetAnalysisResultByUserNameRequest), global::GrpcServices.GetAnalysisResultByUserNameRequest.Parser, new[]{ "Type", "UserName" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcServices.GetAnalysisResultByUserNameResponse), global::GrpcServices.GetAnalysisResultByUserNameResponse.Parser, new[]{ "Results" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcServices.AnalyseResult), global::GrpcServices.AnalyseResult.Parser, new[]{ "Id", "UserName", "TimeOfMessage", "MessageText", "Source", "IsSuspiciousMessage", "AnalysisResultDescription" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcServices.GetAnalysisResultByAuthorRequest), global::GrpcServices.GetAnalysisResultByAuthorRequest.Parser, new[]{ "Author" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcServices.GetAnalysisResultByAuthorResponse), global::GrpcServices.GetAnalysisResultByAuthorResponse.Parser, new[]{ "Results" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcServices.AnalyseResult), global::GrpcServices.AnalyseResult.Parser, new[]{ "Id", "Author", "TimeOfMessage", "Text", "Source", "Topic" }, null, null, null, null)
           }));
     }
     #endregion
 
   }
-  #region Enums
-  public enum AnalysisResultType {
-    [pbr::OriginalName("SuspiciousMessage")] SuspiciousMessage = 0,
-    [pbr::OriginalName("NotSuspiciousMessage")] NotSuspiciousMessage = 1,
-    [pbr::OriginalName("All")] All = 2,
-  }
-
-  #endregion
-
   #region Messages
   public sealed partial class GetAnalysisResultByDateRangeRequest : pb::IMessage<GetAnalysisResultByDateRangeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -116,9 +101,9 @@ namespace GrpcServices {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetAnalysisResultByDateRangeRequest(GetAnalysisResultByDateRangeRequest other) : this() {
-      type_ = other.type_;
       start_ = other.start_ != null ? other.start_.Clone() : null;
       end_ = other.end_ != null ? other.end_.Clone() : null;
+      topic_ = other.topic_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -128,20 +113,8 @@ namespace GrpcServices {
       return new GetAnalysisResultByDateRangeRequest(this);
     }
 
-    /// <summary>Field number for the "type" field.</summary>
-    public const int TypeFieldNumber = 1;
-    private global::GrpcServices.AnalysisResultType type_ = global::GrpcServices.AnalysisResultType.SuspiciousMessage;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::GrpcServices.AnalysisResultType Type {
-      get { return type_; }
-      set {
-        type_ = value;
-      }
-    }
-
     /// <summary>Field number for the "start" field.</summary>
-    public const int StartFieldNumber = 2;
+    public const int StartFieldNumber = 1;
     private global::Google.Protobuf.WellKnownTypes.Timestamp start_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,7 +126,7 @@ namespace GrpcServices {
     }
 
     /// <summary>Field number for the "end" field.</summary>
-    public const int EndFieldNumber = 3;
+    public const int EndFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.Timestamp end_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -162,6 +135,30 @@ namespace GrpcServices {
       set {
         end_ = value;
       }
+    }
+
+    /// <summary>Field number for the "topic" field.</summary>
+    public const int TopicFieldNumber = 3;
+    private string topic_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Topic {
+      get { return topic_ ?? ""; }
+      set {
+        topic_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "topic" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTopic {
+      get { return topic_ != null; }
+    }
+    /// <summary>Clears the value of the "topic" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTopic() {
+      topic_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -179,9 +176,9 @@ namespace GrpcServices {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Type != other.Type) return false;
       if (!object.Equals(Start, other.Start)) return false;
       if (!object.Equals(End, other.End)) return false;
+      if (Topic != other.Topic) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -189,9 +186,9 @@ namespace GrpcServices {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Type != global::GrpcServices.AnalysisResultType.SuspiciousMessage) hash ^= Type.GetHashCode();
       if (start_ != null) hash ^= Start.GetHashCode();
       if (end_ != null) hash ^= End.GetHashCode();
+      if (HasTopic) hash ^= Topic.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -210,17 +207,17 @@ namespace GrpcServices {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Type != global::GrpcServices.AnalysisResultType.SuspiciousMessage) {
-        output.WriteRawTag(8);
-        output.WriteEnum((int) Type);
-      }
       if (start_ != null) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(10);
         output.WriteMessage(Start);
       }
       if (end_ != null) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(18);
         output.WriteMessage(End);
+      }
+      if (HasTopic) {
+        output.WriteRawTag(26);
+        output.WriteString(Topic);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -232,17 +229,17 @@ namespace GrpcServices {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Type != global::GrpcServices.AnalysisResultType.SuspiciousMessage) {
-        output.WriteRawTag(8);
-        output.WriteEnum((int) Type);
-      }
       if (start_ != null) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(10);
         output.WriteMessage(Start);
       }
       if (end_ != null) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(18);
         output.WriteMessage(End);
+      }
+      if (HasTopic) {
+        output.WriteRawTag(26);
+        output.WriteString(Topic);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -254,14 +251,14 @@ namespace GrpcServices {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Type != global::GrpcServices.AnalysisResultType.SuspiciousMessage) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
-      }
       if (start_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Start);
       }
       if (end_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(End);
+      }
+      if (HasTopic) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Topic);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -275,9 +272,6 @@ namespace GrpcServices {
       if (other == null) {
         return;
       }
-      if (other.Type != global::GrpcServices.AnalysisResultType.SuspiciousMessage) {
-        Type = other.Type;
-      }
       if (other.start_ != null) {
         if (start_ == null) {
           Start = new global::Google.Protobuf.WellKnownTypes.Timestamp();
@@ -289,6 +283,9 @@ namespace GrpcServices {
           End = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         End.MergeFrom(other.End);
+      }
+      if (other.HasTopic) {
+        Topic = other.Topic;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -305,22 +302,22 @@ namespace GrpcServices {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            Type = (global::GrpcServices.AnalysisResultType) input.ReadEnum();
-            break;
-          }
-          case 18: {
+          case 10: {
             if (start_ == null) {
               Start = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(Start);
             break;
           }
-          case 26: {
+          case 18: {
             if (end_ == null) {
               End = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(End);
+            break;
+          }
+          case 26: {
+            Topic = input.ReadString();
             break;
           }
         }
@@ -338,22 +335,22 @@ namespace GrpcServices {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            Type = (global::GrpcServices.AnalysisResultType) input.ReadEnum();
-            break;
-          }
-          case 18: {
+          case 10: {
             if (start_ == null) {
               Start = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(Start);
             break;
           }
-          case 26: {
+          case 18: {
             if (end_ == null) {
               End = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(End);
+            break;
+          }
+          case 26: {
+            Topic = input.ReadString();
             break;
           }
         }
@@ -575,7 +572,6 @@ namespace GrpcServices {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetAnalysisResultBySourceRequest(GetAnalysisResultBySourceRequest other) : this() {
-      type_ = other.type_;
       source_ = other.source_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -586,20 +582,8 @@ namespace GrpcServices {
       return new GetAnalysisResultBySourceRequest(this);
     }
 
-    /// <summary>Field number for the "type" field.</summary>
-    public const int TypeFieldNumber = 1;
-    private global::GrpcServices.AnalysisResultType type_ = global::GrpcServices.AnalysisResultType.SuspiciousMessage;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::GrpcServices.AnalysisResultType Type {
-      get { return type_; }
-      set {
-        type_ = value;
-      }
-    }
-
     /// <summary>Field number for the "source" field.</summary>
-    public const int SourceFieldNumber = 2;
+    public const int SourceFieldNumber = 1;
     private string source_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -625,7 +609,6 @@ namespace GrpcServices {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Type != other.Type) return false;
       if (Source != other.Source) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -634,7 +617,6 @@ namespace GrpcServices {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Type != global::GrpcServices.AnalysisResultType.SuspiciousMessage) hash ^= Type.GetHashCode();
       if (Source.Length != 0) hash ^= Source.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -654,12 +636,8 @@ namespace GrpcServices {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Type != global::GrpcServices.AnalysisResultType.SuspiciousMessage) {
-        output.WriteRawTag(8);
-        output.WriteEnum((int) Type);
-      }
       if (Source.Length != 0) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(10);
         output.WriteString(Source);
       }
       if (_unknownFields != null) {
@@ -672,12 +650,8 @@ namespace GrpcServices {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Type != global::GrpcServices.AnalysisResultType.SuspiciousMessage) {
-        output.WriteRawTag(8);
-        output.WriteEnum((int) Type);
-      }
       if (Source.Length != 0) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(10);
         output.WriteString(Source);
       }
       if (_unknownFields != null) {
@@ -690,9 +664,6 @@ namespace GrpcServices {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Type != global::GrpcServices.AnalysisResultType.SuspiciousMessage) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
-      }
       if (Source.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Source);
       }
@@ -707,9 +678,6 @@ namespace GrpcServices {
     public void MergeFrom(GetAnalysisResultBySourceRequest other) {
       if (other == null) {
         return;
-      }
-      if (other.Type != global::GrpcServices.AnalysisResultType.SuspiciousMessage) {
-        Type = other.Type;
       }
       if (other.Source.Length != 0) {
         Source = other.Source;
@@ -729,11 +697,7 @@ namespace GrpcServices {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            Type = (global::GrpcServices.AnalysisResultType) input.ReadEnum();
-            break;
-          }
-          case 18: {
+          case 10: {
             Source = input.ReadString();
             break;
           }
@@ -752,11 +716,7 @@ namespace GrpcServices {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            Type = (global::GrpcServices.AnalysisResultType) input.ReadEnum();
-            break;
-          }
-          case 18: {
+          case 10: {
             Source = input.ReadString();
             break;
           }
@@ -945,16 +905,16 @@ namespace GrpcServices {
 
   }
 
-  public sealed partial class GetAnalysisResultByUserNameRequest : pb::IMessage<GetAnalysisResultByUserNameRequest>
+  public sealed partial class GetAnalysisResultByAuthorRequest : pb::IMessage<GetAnalysisResultByAuthorRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<GetAnalysisResultByUserNameRequest> _parser = new pb::MessageParser<GetAnalysisResultByUserNameRequest>(() => new GetAnalysisResultByUserNameRequest());
+    private static readonly pb::MessageParser<GetAnalysisResultByAuthorRequest> _parser = new pb::MessageParser<GetAnalysisResultByAuthorRequest>(() => new GetAnalysisResultByAuthorRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<GetAnalysisResultByUserNameRequest> Parser { get { return _parser; } }
+    public static pb::MessageParser<GetAnalysisResultByAuthorRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -970,7 +930,7 @@ namespace GrpcServices {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public GetAnalysisResultByUserNameRequest() {
+    public GetAnalysisResultByAuthorRequest() {
       OnConstruction();
     }
 
@@ -978,59 +938,45 @@ namespace GrpcServices {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public GetAnalysisResultByUserNameRequest(GetAnalysisResultByUserNameRequest other) : this() {
-      type_ = other.type_;
-      userName_ = other.userName_;
+    public GetAnalysisResultByAuthorRequest(GetAnalysisResultByAuthorRequest other) : this() {
+      author_ = other.author_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public GetAnalysisResultByUserNameRequest Clone() {
-      return new GetAnalysisResultByUserNameRequest(this);
+    public GetAnalysisResultByAuthorRequest Clone() {
+      return new GetAnalysisResultByAuthorRequest(this);
     }
 
-    /// <summary>Field number for the "type" field.</summary>
-    public const int TypeFieldNumber = 1;
-    private global::GrpcServices.AnalysisResultType type_ = global::GrpcServices.AnalysisResultType.SuspiciousMessage;
+    /// <summary>Field number for the "author" field.</summary>
+    public const int AuthorFieldNumber = 1;
+    private string author_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::GrpcServices.AnalysisResultType Type {
-      get { return type_; }
+    public string Author {
+      get { return author_; }
       set {
-        type_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "userName" field.</summary>
-    public const int UserNameFieldNumber = 2;
-    private string userName_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string UserName {
-      get { return userName_; }
-      set {
-        userName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        author_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as GetAnalysisResultByUserNameRequest);
+      return Equals(other as GetAnalysisResultByAuthorRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(GetAnalysisResultByUserNameRequest other) {
+    public bool Equals(GetAnalysisResultByAuthorRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Type != other.Type) return false;
-      if (UserName != other.UserName) return false;
+      if (Author != other.Author) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1038,8 +984,7 @@ namespace GrpcServices {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Type != global::GrpcServices.AnalysisResultType.SuspiciousMessage) hash ^= Type.GetHashCode();
-      if (UserName.Length != 0) hash ^= UserName.GetHashCode();
+      if (Author.Length != 0) hash ^= Author.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1058,13 +1003,9 @@ namespace GrpcServices {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Type != global::GrpcServices.AnalysisResultType.SuspiciousMessage) {
-        output.WriteRawTag(8);
-        output.WriteEnum((int) Type);
-      }
-      if (UserName.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(UserName);
+      if (Author.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Author);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -1076,13 +1017,9 @@ namespace GrpcServices {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Type != global::GrpcServices.AnalysisResultType.SuspiciousMessage) {
-        output.WriteRawTag(8);
-        output.WriteEnum((int) Type);
-      }
-      if (UserName.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(UserName);
+      if (Author.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Author);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -1094,11 +1031,8 @@ namespace GrpcServices {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Type != global::GrpcServices.AnalysisResultType.SuspiciousMessage) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
-      }
-      if (UserName.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(UserName);
+      if (Author.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Author);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1108,15 +1042,12 @@ namespace GrpcServices {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(GetAnalysisResultByUserNameRequest other) {
+    public void MergeFrom(GetAnalysisResultByAuthorRequest other) {
       if (other == null) {
         return;
       }
-      if (other.Type != global::GrpcServices.AnalysisResultType.SuspiciousMessage) {
-        Type = other.Type;
-      }
-      if (other.UserName.Length != 0) {
-        UserName = other.UserName;
+      if (other.Author.Length != 0) {
+        Author = other.Author;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1133,12 +1064,8 @@ namespace GrpcServices {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            Type = (global::GrpcServices.AnalysisResultType) input.ReadEnum();
-            break;
-          }
-          case 18: {
-            UserName = input.ReadString();
+          case 10: {
+            Author = input.ReadString();
             break;
           }
         }
@@ -1156,12 +1083,8 @@ namespace GrpcServices {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            Type = (global::GrpcServices.AnalysisResultType) input.ReadEnum();
-            break;
-          }
-          case 18: {
-            UserName = input.ReadString();
+          case 10: {
+            Author = input.ReadString();
             break;
           }
         }
@@ -1171,16 +1094,16 @@ namespace GrpcServices {
 
   }
 
-  public sealed partial class GetAnalysisResultByUserNameResponse : pb::IMessage<GetAnalysisResultByUserNameResponse>
+  public sealed partial class GetAnalysisResultByAuthorResponse : pb::IMessage<GetAnalysisResultByAuthorResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<GetAnalysisResultByUserNameResponse> _parser = new pb::MessageParser<GetAnalysisResultByUserNameResponse>(() => new GetAnalysisResultByUserNameResponse());
+    private static readonly pb::MessageParser<GetAnalysisResultByAuthorResponse> _parser = new pb::MessageParser<GetAnalysisResultByAuthorResponse>(() => new GetAnalysisResultByAuthorResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<GetAnalysisResultByUserNameResponse> Parser { get { return _parser; } }
+    public static pb::MessageParser<GetAnalysisResultByAuthorResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1196,7 +1119,7 @@ namespace GrpcServices {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public GetAnalysisResultByUserNameResponse() {
+    public GetAnalysisResultByAuthorResponse() {
       OnConstruction();
     }
 
@@ -1204,15 +1127,15 @@ namespace GrpcServices {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public GetAnalysisResultByUserNameResponse(GetAnalysisResultByUserNameResponse other) : this() {
+    public GetAnalysisResultByAuthorResponse(GetAnalysisResultByAuthorResponse other) : this() {
       results_ = other.results_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public GetAnalysisResultByUserNameResponse Clone() {
-      return new GetAnalysisResultByUserNameResponse(this);
+    public GetAnalysisResultByAuthorResponse Clone() {
+      return new GetAnalysisResultByAuthorResponse(this);
     }
 
     /// <summary>Field number for the "results" field.</summary>
@@ -1229,12 +1152,12 @@ namespace GrpcServices {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as GetAnalysisResultByUserNameResponse);
+      return Equals(other as GetAnalysisResultByAuthorResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(GetAnalysisResultByUserNameResponse other) {
+    public bool Equals(GetAnalysisResultByAuthorResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -1299,7 +1222,7 @@ namespace GrpcServices {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(GetAnalysisResultByUserNameResponse other) {
+    public void MergeFrom(GetAnalysisResultByAuthorResponse other) {
       if (other == null) {
         return;
       }
@@ -1384,12 +1307,11 @@ namespace GrpcServices {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AnalyseResult(AnalyseResult other) : this() {
       id_ = other.id_;
-      userName_ = other.userName_;
+      author_ = other.author_;
       timeOfMessage_ = other.timeOfMessage_ != null ? other.timeOfMessage_.Clone() : null;
-      messageText_ = other.messageText_;
+      text_ = other.text_;
       source_ = other.source_;
-      isSuspiciousMessage_ = other.isSuspiciousMessage_;
-      analysisResultDescription_ = other.analysisResultDescription_;
+      topic_ = other.topic_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1411,15 +1333,15 @@ namespace GrpcServices {
       }
     }
 
-    /// <summary>Field number for the "userName" field.</summary>
-    public const int UserNameFieldNumber = 2;
-    private string userName_ = "";
+    /// <summary>Field number for the "author" field.</summary>
+    public const int AuthorFieldNumber = 2;
+    private string author_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string UserName {
-      get { return userName_; }
+    public string Author {
+      get { return author_; }
       set {
-        userName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        author_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1435,15 +1357,15 @@ namespace GrpcServices {
       }
     }
 
-    /// <summary>Field number for the "messageText" field.</summary>
-    public const int MessageTextFieldNumber = 4;
-    private string messageText_ = "";
+    /// <summary>Field number for the "text" field.</summary>
+    public const int TextFieldNumber = 4;
+    private string text_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string MessageText {
-      get { return messageText_; }
+    public string Text {
+      get { return text_; }
       set {
-        messageText_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        text_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1459,27 +1381,15 @@ namespace GrpcServices {
       }
     }
 
-    /// <summary>Field number for the "isSuspiciousMessage" field.</summary>
-    public const int IsSuspiciousMessageFieldNumber = 6;
-    private bool isSuspiciousMessage_;
+    /// <summary>Field number for the "topic" field.</summary>
+    public const int TopicFieldNumber = 6;
+    private string topic_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsSuspiciousMessage {
-      get { return isSuspiciousMessage_; }
+    public string Topic {
+      get { return topic_; }
       set {
-        isSuspiciousMessage_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "analysisResultDescription" field.</summary>
-    public const int AnalysisResultDescriptionFieldNumber = 7;
-    private string analysisResultDescription_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string AnalysisResultDescription {
-      get { return analysisResultDescription_; }
-      set {
-        analysisResultDescription_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        topic_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1499,12 +1409,11 @@ namespace GrpcServices {
         return true;
       }
       if (Id != other.Id) return false;
-      if (UserName != other.UserName) return false;
+      if (Author != other.Author) return false;
       if (!object.Equals(TimeOfMessage, other.TimeOfMessage)) return false;
-      if (MessageText != other.MessageText) return false;
+      if (Text != other.Text) return false;
       if (Source != other.Source) return false;
-      if (IsSuspiciousMessage != other.IsSuspiciousMessage) return false;
-      if (AnalysisResultDescription != other.AnalysisResultDescription) return false;
+      if (Topic != other.Topic) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1513,12 +1422,11 @@ namespace GrpcServices {
     public override int GetHashCode() {
       int hash = 1;
       if (Id.Length != 0) hash ^= Id.GetHashCode();
-      if (UserName.Length != 0) hash ^= UserName.GetHashCode();
+      if (Author.Length != 0) hash ^= Author.GetHashCode();
       if (timeOfMessage_ != null) hash ^= TimeOfMessage.GetHashCode();
-      if (MessageText.Length != 0) hash ^= MessageText.GetHashCode();
+      if (Text.Length != 0) hash ^= Text.GetHashCode();
       if (Source.Length != 0) hash ^= Source.GetHashCode();
-      if (IsSuspiciousMessage != false) hash ^= IsSuspiciousMessage.GetHashCode();
-      if (AnalysisResultDescription.Length != 0) hash ^= AnalysisResultDescription.GetHashCode();
+      if (Topic.Length != 0) hash ^= Topic.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1541,29 +1449,25 @@ namespace GrpcServices {
         output.WriteRawTag(10);
         output.WriteString(Id);
       }
-      if (UserName.Length != 0) {
+      if (Author.Length != 0) {
         output.WriteRawTag(18);
-        output.WriteString(UserName);
+        output.WriteString(Author);
       }
       if (timeOfMessage_ != null) {
         output.WriteRawTag(26);
         output.WriteMessage(TimeOfMessage);
       }
-      if (MessageText.Length != 0) {
+      if (Text.Length != 0) {
         output.WriteRawTag(34);
-        output.WriteString(MessageText);
+        output.WriteString(Text);
       }
       if (Source.Length != 0) {
         output.WriteRawTag(42);
         output.WriteString(Source);
       }
-      if (IsSuspiciousMessage != false) {
-        output.WriteRawTag(48);
-        output.WriteBool(IsSuspiciousMessage);
-      }
-      if (AnalysisResultDescription.Length != 0) {
-        output.WriteRawTag(58);
-        output.WriteString(AnalysisResultDescription);
+      if (Topic.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(Topic);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -1579,29 +1483,25 @@ namespace GrpcServices {
         output.WriteRawTag(10);
         output.WriteString(Id);
       }
-      if (UserName.Length != 0) {
+      if (Author.Length != 0) {
         output.WriteRawTag(18);
-        output.WriteString(UserName);
+        output.WriteString(Author);
       }
       if (timeOfMessage_ != null) {
         output.WriteRawTag(26);
         output.WriteMessage(TimeOfMessage);
       }
-      if (MessageText.Length != 0) {
+      if (Text.Length != 0) {
         output.WriteRawTag(34);
-        output.WriteString(MessageText);
+        output.WriteString(Text);
       }
       if (Source.Length != 0) {
         output.WriteRawTag(42);
         output.WriteString(Source);
       }
-      if (IsSuspiciousMessage != false) {
-        output.WriteRawTag(48);
-        output.WriteBool(IsSuspiciousMessage);
-      }
-      if (AnalysisResultDescription.Length != 0) {
-        output.WriteRawTag(58);
-        output.WriteString(AnalysisResultDescription);
+      if (Topic.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(Topic);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -1616,23 +1516,20 @@ namespace GrpcServices {
       if (Id.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
       }
-      if (UserName.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(UserName);
+      if (Author.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Author);
       }
       if (timeOfMessage_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TimeOfMessage);
       }
-      if (MessageText.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(MessageText);
+      if (Text.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Text);
       }
       if (Source.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Source);
       }
-      if (IsSuspiciousMessage != false) {
-        size += 1 + 1;
-      }
-      if (AnalysisResultDescription.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(AnalysisResultDescription);
+      if (Topic.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Topic);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1649,8 +1546,8 @@ namespace GrpcServices {
       if (other.Id.Length != 0) {
         Id = other.Id;
       }
-      if (other.UserName.Length != 0) {
-        UserName = other.UserName;
+      if (other.Author.Length != 0) {
+        Author = other.Author;
       }
       if (other.timeOfMessage_ != null) {
         if (timeOfMessage_ == null) {
@@ -1658,17 +1555,14 @@ namespace GrpcServices {
         }
         TimeOfMessage.MergeFrom(other.TimeOfMessage);
       }
-      if (other.MessageText.Length != 0) {
-        MessageText = other.MessageText;
+      if (other.Text.Length != 0) {
+        Text = other.Text;
       }
       if (other.Source.Length != 0) {
         Source = other.Source;
       }
-      if (other.IsSuspiciousMessage != false) {
-        IsSuspiciousMessage = other.IsSuspiciousMessage;
-      }
-      if (other.AnalysisResultDescription.Length != 0) {
-        AnalysisResultDescription = other.AnalysisResultDescription;
+      if (other.Topic.Length != 0) {
+        Topic = other.Topic;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1690,7 +1584,7 @@ namespace GrpcServices {
             break;
           }
           case 18: {
-            UserName = input.ReadString();
+            Author = input.ReadString();
             break;
           }
           case 26: {
@@ -1701,19 +1595,15 @@ namespace GrpcServices {
             break;
           }
           case 34: {
-            MessageText = input.ReadString();
+            Text = input.ReadString();
             break;
           }
           case 42: {
             Source = input.ReadString();
             break;
           }
-          case 48: {
-            IsSuspiciousMessage = input.ReadBool();
-            break;
-          }
-          case 58: {
-            AnalysisResultDescription = input.ReadString();
+          case 50: {
+            Topic = input.ReadString();
             break;
           }
         }
@@ -1736,7 +1626,7 @@ namespace GrpcServices {
             break;
           }
           case 18: {
-            UserName = input.ReadString();
+            Author = input.ReadString();
             break;
           }
           case 26: {
@@ -1747,19 +1637,15 @@ namespace GrpcServices {
             break;
           }
           case 34: {
-            MessageText = input.ReadString();
+            Text = input.ReadString();
             break;
           }
           case 42: {
             Source = input.ReadString();
             break;
           }
-          case 48: {
-            IsSuspiciousMessage = input.ReadBool();
-            break;
-          }
-          case 58: {
-            AnalysisResultDescription = input.ReadString();
+          case 50: {
+            Topic = input.ReadString();
             break;
           }
         }

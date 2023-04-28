@@ -1,30 +1,19 @@
-﻿namespace Domain;
+﻿using MongoDB.Bson.Serialization.Attributes;
+
+namespace Domain;
 
 public class AnalysisResult
 {
-    public Guid Id { get; }
-    public string UserName { get; }
-    public DateTime TimeOfMessage { get; }
-    public byte[] MessageText { get; }
-    public string Source { get; }
-    public bool IsSuspiciousMessage { get; }
-    public byte[] AnalysisResultDescription { get; }
+    [BsonId]
+    public string Id { get; set; }
+    public Message Message { get; }
+    public string Topic { get; }
 
     public AnalysisResult(
-        Guid id,
-        string userName,
-        byte[] messageText, 
-        DateTime timeOfMessage, 
-        bool isSuspiciousMessage, 
-        string source,
-        byte[] analysisResultDescription)
+        Message message,
+        string topic)
     {
-        Id = id;
-        UserName = userName;
-        MessageText = messageText;
-        TimeOfMessage = timeOfMessage;
-        IsSuspiciousMessage = isSuspiciousMessage;
-        Source = source;
-        AnalysisResultDescription = analysisResultDescription;
+        Message = message;
+        Topic = topic;
     }
 }

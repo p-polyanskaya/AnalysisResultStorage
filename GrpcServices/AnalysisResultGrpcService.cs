@@ -5,7 +5,7 @@ using MediatR;
 
 namespace GrpcServices;
 
-public class AnalysisResultGrpcService: AnalysisResultOperation.AnalysisResultOperationBase
+public class AnalysisResultGrpcService : AnalysisResultOperation.AnalysisResultOperationBase
 {
     private readonly IMediator _mediator;
 
@@ -13,49 +13,42 @@ public class AnalysisResultGrpcService: AnalysisResultOperation.AnalysisResultOp
     {
         _mediator = mediator;
     }
-    
-    public override async Task<GetAnalysisResultBySourceResponse> GetAnalysisResultBySource(GetAnalysisResultBySourceRequest request, ServerCallContext context)
+
+    public override async Task<GetAnalysisResultBySourceResponse> GetAnalysisResultBySource(
+        GetAnalysisResultBySourceRequest request, ServerCallContext context)
     {
-        var query = new GetAnalysisResultBySourceQuery.Request(request.Source, ToDomainType(request.Type));
+        var query = new GetAnalysisResultBySourceQuery.Request(request.Source);
         var response = await _mediator.Send(query, context.CancellationToken);
         return new GetAnalysisResultBySourceResponse { Results = { response.Select(ToProtoAnalyseResult).ToList() } };
     }
 
-    public override async Task<GetAnalysisResultByDateRangeResponse> GetAnalysisResultByDateRange(GetAnalysisResultByDateRangeRequest request, ServerCallContext context)
+    public override async Task<GetAnalysisResultByDateRangeResponse> GetAnalysisResultByDateRange(
+        GetAnalysisResultByDateRangeRequest request, ServerCallContext context)
     {
-        var query = new GetAnalysisResultByDateRangeQuery.Request(request.Start.ToDateTime(), request.End.ToDateTime(), ToDomainType(request.Type));
+        var query = new GetAnalysisResultByDateRangeQuery.Request(request.Start.ToDateTime(), request.End.ToDateTime(),
+            request.Topic);
         var response = await _mediator.Send(query, context.CancellationToken);
-        return new GetAnalysisResultByDateRangeResponse { Results = { response.Select(ToProtoAnalyseResult).ToList() } };
+        return new GetAnalysisResultByDateRangeResponse
+            { Results = { response.Select(ToProtoAnalyseResult).ToList() } };
     }
 
-    public override async Task<GetAnalysisResultByUserNameResponse> GetAnalysisResultByUserName(GetAnalysisResultByUserNameRequest request, ServerCallContext context)
+    public override async Task<GetAnalysisResultByAuthorResponse> GetAnalysisResultByAuthor(
+        GetAnalysisResultByAuthorRequest request, ServerCallContext context)
     {
-        var query = new GetAnalysisResultByUserNameQuery.Request(request.UserName, ToDomainType(request.Type));
+        var query = new GetAnalysisResultByAuthorQuery.Request(request.Author);
         var response = await _mediator.Send(query, context.CancellationToken);
-        return new GetAnalysisResultByUserNameResponse { Results = { response.Select(ToProtoAnalyseResult).ToList() } };
-    }
-    
-    private static Domain.AnalysisResultType ToDomainType(AnalysisResultType type)
-    {
-        return type switch
-        {
-            AnalysisResultType.SuspiciousMessage => Domain.AnalysisResultType.SuspiciousMessage,
-            AnalysisResultType.NotSuspiciousMessage => Domain.AnalysisResultType.NotSuspiciousMessage,
-            AnalysisResultType.All => Domain.AnalysisResultType.All
-        };
+        return new GetAnalysisResultByAuthorResponse { Results = { response.Select(ToProtoAnalyseResult).ToList() } };
     }
 
-    private static AnalyseResult ToProtoAnalyseResult(Domain.AnalysisResult analysisResult)
+    private static AnalyseResult ToProtoAnalyseResult(Domain.AnalysisResultMongo analysisResult)
     {
         return new AnalyseResult
         {
-            Id = analysisResult.Id.ToString(),
-            AnalysisResultDescription = System.Text.Encoding.UTF8.GetString(analysisResult.AnalysisResultDescription),
-            IsSuspiciousMessage = analysisResult.IsSuspiciousMessage,
-            MessageText = System.Text.Encoding.UTF8.GetString(analysisResult.MessageText),
+            Id = analysisResult.Id,
+            Text = analysisResult.Text,
             Source = analysisResult.Source,
             TimeOfMessage = analysisResult.TimeOfMessage.ToTimestamp(),
-            UserName = analysisResult.UserName
+            Author = analysisResult.Author
         };
     }
 }

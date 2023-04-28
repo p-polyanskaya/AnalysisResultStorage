@@ -1,43 +1,45 @@
+using AnalysisResultStorage;
 using Application;
 using Consumers;
-using Domain;
 using GrpcServices;
-using MongoDB.Driver;
-using FluentMigrator.Runner;
+using Metrics;
 using Migration;
+using Options;
+using Prometheus;
+using IMetricFactory = Prometheus.Client.IMetricFactory;
 
 var builder = WebApplication.CreateBuilder(args);
 
-//builder.Services.AddHostedService<AnalysisResultConsumer>();
+//регистрация консьюмера
+builder.Services.AddHostedService<AnalysisResultConsumer>();
+
+//настройках данных из appsettings
+builder.Services.Configure<MongoSettings>(builder.Configuration.GetSection(nameof(MongoSettings)));
+builder.Services.Configure<ConsumersSettings>(builder.Configuration.GetSection(nameof(ConsumersSettings)));
+
+//настройка монго и ее индексов
+await builder.Services.SetMongo();
+//настройка миграций постгреса
+//builder.Services.SetPostgres();
+//настрйока медиаторов
 builder.Services.AddMediatR(x =>
     x.RegisterServicesFromAssemblies(typeof(GetAnalysisResultBySourceQuery.Handler).Assembly));
 
-var mongoClient = new MongoClient("mongodb://localhost:27017");
-var db = mongoClient.GetDatabase("myDB11");
-var collection = db.GetCollection<AnalysisResult>("myCol");
-var keys = Builders<AnalysisResult>.IndexKeys.Ascending(x => x.Id);
-await collection.Indexes.CreateOneAsync(new CreateIndexModel<AnalysisResult>(keys));
-//var ixList = collection.Indexes.List().ToList<BsonDocument>();
-//ixList.ForEach(ix => Console.WriteLine(ix));
+//регистрация сервисов
+builder.Services.AddSingleton<MetricSetter>();
 
-builder.Services.AddSingleton<IMongoClient>(s => mongoClient);
-
+//настройка grpc
 builder.Services.AddGrpc();
 builder.Services.AddGrpcReflection();
 
-builder.Services
-    .AddFluentMigratorCore()
-    .ConfigureRunner(rb => rb
-        .AddPostgres()
-        .WithGlobalConnectionString(
-            "Server=127.0.0.1;Port=5432;Userid=postgres;Password=postgres;Database=course_db")
-        .ScanIn(typeof(CreatePostgresTable).Assembly).For.Migrations())
-    .AddLogging(lb => lb.AddFluentMigratorConsole());
-
 var app = builder.Build();
+
+//настройка grpc
 app.MapGrpcService<AnalysisResultGrpcService>();
 app.MapGrpcReflectionService();
 
-app.Migrate();
+//app.Migrate();
+
+app.UseMetricServer();
 
 app.Run();

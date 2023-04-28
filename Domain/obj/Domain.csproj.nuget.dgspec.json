@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/polina/RiderProjects/AnalysisResultStorage/Domain/Domain.csproj": {}
+    "/Users/polina/Documents/GitHub/AnalysisResultStorage/Domain/Domain.csproj": {}
   },
   "projects": {
-    "/Users/polina/RiderProjects/AnalysisResultStorage/Domain/Domain.csproj": {
+    "/Users/polina/Documents/GitHub/AnalysisResultStorage/Domain/Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/polina/RiderProjects/AnalysisResultStorage/Domain/Domain.csproj",
+        "projectUniqueName": "/Users/polina/Documents/GitHub/AnalysisResultStorage/Domain/Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "/Users/polina/RiderProjects/AnalysisResultStorage/Domain/Domain.csproj",
+        "projectPath": "/Users/polina/Documents/GitHub/AnalysisResultStorage/Domain/Domain.csproj",
         "packagesPath": "/Users/polina/.nuget/packages/",
-        "outputPath": "/Users/polina/RiderProjects/AnalysisResultStorage/Domain/obj/",
+        "outputPath": "/Users/polina/Documents/GitHub/AnalysisResultStorage/Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/polina/.nuget/NuGet/NuGet.Config"
@@ -37,6 +37,12 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "MongoDB.Bson": {
+              "target": "Package",
+              "version": "[2.19.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

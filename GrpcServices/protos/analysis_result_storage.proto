@@ -6,46 +6,37 @@ import "google/protobuf/timestamp.proto";
 service AnalysisResultOperation {
   rpc GetAnalysisResultByDateRange (GetAnalysisResultByDateRangeRequest) returns (GetAnalysisResultByDateRangeResponse);
   rpc GetAnalysisResultBySource (GetAnalysisResultBySourceRequest) returns (GetAnalysisResultBySourceResponse);
-  rpc GetAnalysisResultByUserName (GetAnalysisResultByUserNameRequest) returns (GetAnalysisResultByUserNameResponse);
+  rpc GetAnalysisResultByAuthor (GetAnalysisResultByAuthorRequest) returns (GetAnalysisResultByAuthorResponse);
 }
 
 message GetAnalysisResultByDateRangeRequest {
-  AnalysisResultType type = 1;
-  google.protobuf.Timestamp start = 2;
-  google.protobuf.Timestamp end = 3;
+  google.protobuf.Timestamp start = 1;
+  google.protobuf.Timestamp end = 2;
+  optional string topic = 3;
 }
 message GetAnalysisResultByDateRangeResponse {
   repeated AnalyseResult results = 1;
 }
 
 message GetAnalysisResultBySourceRequest {
-  AnalysisResultType type = 1;
-  string source = 2;
+  string source = 1;
 }
 message GetAnalysisResultBySourceResponse {
   repeated AnalyseResult results = 1;
 }
 
-message GetAnalysisResultByUserNameRequest {
-  AnalysisResultType type = 1;
-  string userName = 2;
+message GetAnalysisResultByAuthorRequest {
+  string author = 1;
 }
-message GetAnalysisResultByUserNameResponse {
+message GetAnalysisResultByAuthorResponse {
   repeated AnalyseResult results = 1;
 }
 
-enum AnalysisResultType {
-  SuspiciousMessage = 0;
-  NotSuspiciousMessage = 1;
-  All = 2;
-}
-
 message AnalyseResult {
-  string id = 1;
-  string userName = 2;
-  google.protobuf.Timestamp timeOfMessage = 3;
-  string messageText = 4;
-  string source = 5;
-  bool isSuspiciousMessage = 6;
-  string analysisResultDescription = 7;
+    string id = 1;
+    string author = 2;
+    google.protobuf.Timestamp timeOfMessage = 3;
+    string text = 4;
+    string source = 5;
+    string topic = 6;
 }

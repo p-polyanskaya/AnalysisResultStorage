@@ -54,9 +54,9 @@ namespace GrpcServices {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::GrpcServices.GetAnalysisResultBySourceResponse> __Marshaller_analysis_result_GetAnalysisResultBySourceResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcServices.GetAnalysisResultBySourceResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::GrpcServices.GetAnalysisResultByUserNameRequest> __Marshaller_analysis_result_GetAnalysisResultByUserNameRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcServices.GetAnalysisResultByUserNameRequest.Parser));
+    static readonly grpc::Marshaller<global::GrpcServices.GetAnalysisResultByAuthorRequest> __Marshaller_analysis_result_GetAnalysisResultByAuthorRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcServices.GetAnalysisResultByAuthorRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::GrpcServices.GetAnalysisResultByUserNameResponse> __Marshaller_analysis_result_GetAnalysisResultByUserNameResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcServices.GetAnalysisResultByUserNameResponse.Parser));
+    static readonly grpc::Marshaller<global::GrpcServices.GetAnalysisResultByAuthorResponse> __Marshaller_analysis_result_GetAnalysisResultByAuthorResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcServices.GetAnalysisResultByAuthorResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::GrpcServices.GetAnalysisResultByDateRangeRequest, global::GrpcServices.GetAnalysisResultByDateRangeResponse> __Method_GetAnalysisResultByDateRange = new grpc::Method<global::GrpcServices.GetAnalysisResultByDateRangeRequest, global::GrpcServices.GetAnalysisResultByDateRangeResponse>(
@@ -75,12 +75,12 @@ namespace GrpcServices {
         __Marshaller_analysis_result_GetAnalysisResultBySourceResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::GrpcServices.GetAnalysisResultByUserNameRequest, global::GrpcServices.GetAnalysisResultByUserNameResponse> __Method_GetAnalysisResultByUserName = new grpc::Method<global::GrpcServices.GetAnalysisResultByUserNameRequest, global::GrpcServices.GetAnalysisResultByUserNameResponse>(
+    static readonly grpc::Method<global::GrpcServices.GetAnalysisResultByAuthorRequest, global::GrpcServices.GetAnalysisResultByAuthorResponse> __Method_GetAnalysisResultByAuthor = new grpc::Method<global::GrpcServices.GetAnalysisResultByAuthorRequest, global::GrpcServices.GetAnalysisResultByAuthorResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
-        "GetAnalysisResultByUserName",
-        __Marshaller_analysis_result_GetAnalysisResultByUserNameRequest,
-        __Marshaller_analysis_result_GetAnalysisResultByUserNameResponse);
+        "GetAnalysisResultByAuthor",
+        __Marshaller_analysis_result_GetAnalysisResultByAuthorRequest,
+        __Marshaller_analysis_result_GetAnalysisResultByAuthorResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -105,7 +105,7 @@ namespace GrpcServices {
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::GrpcServices.GetAnalysisResultByUserNameResponse> GetAnalysisResultByUserName(global::GrpcServices.GetAnalysisResultByUserNameRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::GrpcServices.GetAnalysisResultByAuthorResponse> GetAnalysisResultByAuthor(global::GrpcServices.GetAnalysisResultByAuthorRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -120,7 +120,7 @@ namespace GrpcServices {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_GetAnalysisResultByDateRange, serviceImpl.GetAnalysisResultByDateRange)
           .AddMethod(__Method_GetAnalysisResultBySource, serviceImpl.GetAnalysisResultBySource)
-          .AddMethod(__Method_GetAnalysisResultByUserName, serviceImpl.GetAnalysisResultByUserName).Build();
+          .AddMethod(__Method_GetAnalysisResultByAuthor, serviceImpl.GetAnalysisResultByAuthor).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -132,7 +132,7 @@ namespace GrpcServices {
     {
       serviceBinder.AddMethod(__Method_GetAnalysisResultByDateRange, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::GrpcServices.GetAnalysisResultByDateRangeRequest, global::GrpcServices.GetAnalysisResultByDateRangeResponse>(serviceImpl.GetAnalysisResultByDateRange));
       serviceBinder.AddMethod(__Method_GetAnalysisResultBySource, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::GrpcServices.GetAnalysisResultBySourceRequest, global::GrpcServices.GetAnalysisResultBySourceResponse>(serviceImpl.GetAnalysisResultBySource));
-      serviceBinder.AddMethod(__Method_GetAnalysisResultByUserName, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::GrpcServices.GetAnalysisResultByUserNameRequest, global::GrpcServices.GetAnalysisResultByUserNameResponse>(serviceImpl.GetAnalysisResultByUserName));
+      serviceBinder.AddMethod(__Method_GetAnalysisResultByAuthor, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::GrpcServices.GetAnalysisResultByAuthorRequest, global::GrpcServices.GetAnalysisResultByAuthorResponse>(serviceImpl.GetAnalysisResultByAuthor));
     }
 
   }

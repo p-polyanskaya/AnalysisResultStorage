@@ -4111,11 +4111,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/polina/RiderProjects/AnalysisResultStorage/Migration/Migration.csproj",
+      "projectUniqueName": "/Users/polina/Documents/GitHub/AnalysisResultStorage/Migration/Migration.csproj",
       "projectName": "Migration",
-      "projectPath": "/Users/polina/RiderProjects/AnalysisResultStorage/Migration/Migration.csproj",
+      "projectPath": "/Users/polina/Documents/GitHub/AnalysisResultStorage/Migration/Migration.csproj",
       "packagesPath": "/Users/polina/.nuget/packages/",
-      "outputPath": "/Users/polina/RiderProjects/AnalysisResultStorage/Migration/obj/",
+      "outputPath": "/Users/polina/Documents/GitHub/AnalysisResultStorage/Migration/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/polina/.nuget/NuGet/NuGet.Config"

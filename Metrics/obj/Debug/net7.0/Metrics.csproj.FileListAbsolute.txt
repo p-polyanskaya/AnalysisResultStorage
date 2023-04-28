@@ -1,0 +1,12 @@
+/Users/polina/Documents/GitHub/AnalysisResultStorage/Metrics/bin/Debug/net7.0/Metrics.deps.json
+/Users/polina/Documents/GitHub/AnalysisResultStorage/Metrics/bin/Debug/net7.0/Metrics.dll
+/Users/polina/Documents/GitHub/AnalysisResultStorage/Metrics/bin/Debug/net7.0/Metrics.pdb
+/Users/polina/Documents/GitHub/AnalysisResultStorage/Metrics/obj/Debug/net7.0/Metrics.csproj.AssemblyReference.cache
+/Users/polina/Documents/GitHub/AnalysisResultStorage/Metrics/obj/Debug/net7.0/Metrics.GeneratedMSBuildEditorConfig.editorconfig
+/Users/polina/Documents/GitHub/AnalysisResultStorage/Metrics/obj/Debug/net7.0/Metrics.AssemblyInfoInputs.cache
+/Users/polina/Documents/GitHub/AnalysisResultStorage/Metrics/obj/Debug/net7.0/Metrics.AssemblyInfo.cs
+/Users/polina/Documents/GitHub/AnalysisResultStorage/Metrics/obj/Debug/net7.0/Metrics.csproj.CoreCompileInputs.cache
+/Users/polina/Documents/GitHub/AnalysisResultStorage/Metrics/obj/Debug/net7.0/Metrics.dll
+/Users/polina/Documents/GitHub/AnalysisResultStorage/Metrics/obj/Debug/net7.0/refint/Metrics.dll
+/Users/polina/Documents/GitHub/AnalysisResultStorage/Metrics/obj/Debug/net7.0/Metrics.pdb
+/Users/polina/Documents/GitHub/AnalysisResultStorage/Metrics/obj/Debug/net7.0/ref/Metrics.dll

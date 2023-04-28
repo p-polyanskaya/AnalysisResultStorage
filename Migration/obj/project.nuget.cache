@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sZmXjEJnVFrxByg1Xw4KpGWwnsss4ZPvuN7m6cDM/zkDPi4TVWsJPQOmumtO76ns5b6zhle9RPjZOkUSoWxgUg==",
+  "dgSpecHash": "RAQy6xuTNF7V3pHkh/DwQRHmDnPdQ/OSrS6F0Thf4jCJffuESGDw/lM7db1Ij5dLLXC13BGHV6/JFgJVxfDqtw==",
   "success": true,
-  "projectFilePath": "/Users/polina/RiderProjects/AnalysisResultStorage/Migration/Migration.csproj",
+  "projectFilePath": "/Users/polina/Documents/GitHub/AnalysisResultStorage/Migration/Migration.csproj",
   "expectedPackageFiles": [
     "/Users/polina/.nuget/packages/fluentmigrator/3.3.2/fluentmigrator.3.3.2.nupkg.sha512",
     "/Users/polina/.nuget/packages/fluentmigrator.abstractions/3.3.2/fluentmigrator.abstractions.3.3.2.nupkg.sha512",

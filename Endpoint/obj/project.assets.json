@@ -1658,20 +1658,20 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
-      "Microsoft.Extensions.Http/3.0.3": {
+      "Microsoft.Extensions.Http/3.1.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.0.3",
-          "Microsoft.Extensions.Logging": "3.0.3",
-          "Microsoft.Extensions.Options": "3.0.3"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.0",
+          "Microsoft.Extensions.Logging": "3.1.0",
+          "Microsoft.Extensions.Options": "3.1.0"
         },
         "compile": {
-          "lib/netcoreapp3.0/Microsoft.Extensions.Http.dll": {
+          "lib/netcoreapp3.1/Microsoft.Extensions.Http.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netcoreapp3.0/Microsoft.Extensions.Http.dll": {
+          "lib/netcoreapp3.1/Microsoft.Extensions.Http.dll": {
             "related": ".xml"
           }
         }
@@ -1832,15 +1832,15 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
-      "Microsoft.Extensions.ObjectPool/2.2.0": {
+      "Microsoft.Extensions.ObjectPool/7.0.0": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/Microsoft.Extensions.ObjectPool.dll": {
+          "lib/net7.0/Microsoft.Extensions.ObjectPool.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.Extensions.ObjectPool.dll": {
+          "lib/net7.0/Microsoft.Extensions.ObjectPool.dll": {
             "related": ".xml"
           }
         }
@@ -2186,6 +2186,71 @@
         },
         "runtime": {
           "lib/net7.0/Npgsql.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "prometheus-net/8.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Http": "3.1.0",
+          "Microsoft.Extensions.ObjectPool": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0/Prometheus.NetStandard.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Prometheus.NetStandard.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "prometheus-net.AspNetCore/8.0.0": {
+        "type": "package",
+        "dependencies": {
+          "prometheus-net": "8.0.0"
+        },
+        "compile": {
+          "lib/net6.0/Prometheus.AspNetCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Prometheus.AspNetCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "Prometheus.Client/5.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Prometheus.Client.Abstractions": "5.2.0"
+        },
+        "compile": {
+          "lib/netstandard2.1/Prometheus.Client.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/Prometheus.Client.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Prometheus.Client.Abstractions/5.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.1/Prometheus.Client.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/Prometheus.Client.Abstractions.dll": {
             "related": ".xml"
           }
         }
@@ -2689,7 +2754,9 @@
           "CSharpFunctionalExtensions": "2.38.1",
           "Domain": "1.0.0",
           "MediatR": "12.0.1",
-          "MongoDB.Driver": "2.19.1"
+          "Metrics": "1.0.0",
+          "MongoDB.Driver": "2.19.1",
+          "Options": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Application.dll": {}
@@ -2718,6 +2785,9 @@
       "Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "MongoDB.Bson": "2.19.1"
+        },
         "compile": {
           "bin/placeholder/Domain.dll": {}
         },
@@ -2742,6 +2812,20 @@
           "bin/placeholder/GrpcServices.dll": {}
         }
       },
+      "Metrics/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Prometheus.Client": "5.2.0",
+          "prometheus-net.AspNetCore": "8.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Metrics.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Metrics.dll": {}
+        }
+      },
       "Migration/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -2756,6 +2840,16 @@
         },
         "runtime": {
           "bin/placeholder/Migration.dll": {}
+        }
+      },
+      "Options/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Options.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Options.dll": {}
         }
       }
     }
@@ -4757,20 +4851,20 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.Extensions.Http/3.0.3": {
-      "sha512": "dcyB8szIcSynjVZRuFgqkZpPgTc5zeRSj1HMXSmNqWbHYKiPYJl8ZQgBHz6wmZNSUUNGpCs5uxUg8DZHHDC1Ew==",
+    "Microsoft.Extensions.Http/3.1.0": {
+      "sha512": "DLigdcV0nYaT6/ly0rnfP80BnXq8NNd/h8/SkfY39uio7Bd9LauVntp6RcRh1Kj23N+uf80GgL7Win6P3BCtoQ==",
       "type": "package",
-      "path": "microsoft.extensions.http/3.0.3",
+      "path": "microsoft.extensions.http/3.1.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "Icon.png",
-        "lib/netcoreapp3.0/Microsoft.Extensions.Http.dll",
-        "lib/netcoreapp3.0/Microsoft.Extensions.Http.xml",
+        "lib/netcoreapp3.1/Microsoft.Extensions.Http.dll",
+        "lib/netcoreapp3.1/Microsoft.Extensions.Http.xml",
         "lib/netstandard2.0/Microsoft.Extensions.Http.dll",
         "lib/netstandard2.0/Microsoft.Extensions.Http.xml",
-        "microsoft.extensions.http.3.0.3.nupkg.sha512",
-        "microsoft.extensions.http.nuspec"
+        "microsoft.extensions.http.3.1.0.nupkg.sha512",
+        "microsoft.extensions.http.nuspec",
+        "packageIcon.png"
       ]
     },
     "Microsoft.Extensions.Logging/7.0.0": {
@@ -5007,16 +5101,22 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.Extensions.ObjectPool/2.2.0": {
-      "sha512": "gA8H7uQOnM5gb+L0uTNjViHYr+hRDqCdfugheGo/MxQnuHzmhhzCBTIPm19qL1z1Xe0NEMabfcOBGv9QghlZ8g==",
+    "Microsoft.Extensions.ObjectPool/7.0.0": {
+      "sha512": "udvKco0sAVgYGTBnHUb0tY9JQzJ/nPDiv/8PIyz69wl1AibeCDZOLVVI+6156dPfHmJH7ws5oUJRiW4ZmAvuuA==",
       "type": "package",
-      "path": "microsoft.extensions.objectpool/2.2.0",
+      "path": "microsoft.extensions.objectpool/7.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net462/Microsoft.Extensions.ObjectPool.dll",
+        "lib/net462/Microsoft.Extensions.ObjectPool.xml",
+        "lib/net7.0/Microsoft.Extensions.ObjectPool.dll",
+        "lib/net7.0/Microsoft.Extensions.ObjectPool.xml",
         "lib/netstandard2.0/Microsoft.Extensions.ObjectPool.dll",
         "lib/netstandard2.0/Microsoft.Extensions.ObjectPool.xml",
-        "microsoft.extensions.objectpool.2.2.0.nupkg.sha512",
+        "microsoft.extensions.objectpool.7.0.0.nupkg.sha512",
         "microsoft.extensions.objectpool.nuspec"
       ]
     },
@@ -5466,6 +5566,76 @@
         "npgsql.7.0.2.nupkg.sha512",
         "npgsql.nuspec",
         "postgresql.png"
+      ]
+    },
+    "prometheus-net/8.0.0": {
+      "sha512": "tUz6ScbA4J193hT1xUxTXQuEAZj8b5YUUrdUVIEXb6yYOZZEvPzs4zqFqI2iJW6aLmldMEiUqCFq93EOLvqITA==",
+      "type": "package",
+      "path": "prometheus-net/8.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net462/Prometheus.NetStandard.dll",
+        "lib/net462/Prometheus.NetStandard.xml",
+        "lib/net6.0/Prometheus.NetStandard.dll",
+        "lib/net6.0/Prometheus.NetStandard.xml",
+        "lib/net7.0/Prometheus.NetStandard.dll",
+        "lib/net7.0/Prometheus.NetStandard.xml",
+        "lib/netstandard2.0/Prometheus.NetStandard.dll",
+        "lib/netstandard2.0/Prometheus.NetStandard.xml",
+        "prometheus-net-logo.png",
+        "prometheus-net.8.0.0.nupkg.sha512",
+        "prometheus-net.nuspec"
+      ]
+    },
+    "prometheus-net.AspNetCore/8.0.0": {
+      "sha512": "XNeeTpq9DMWOQC9t4yu4sYRE7WqRn9CrHi916gV8n4Zwe5kzFqGt5H2FnIm7LLGw2edndU2AtdlYs9bJ2AmVuQ==",
+      "type": "package",
+      "path": "prometheus-net.aspnetcore/8.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net6.0/Prometheus.AspNetCore.dll",
+        "lib/net6.0/Prometheus.AspNetCore.xml",
+        "prometheus-net-logo.png",
+        "prometheus-net.aspnetcore.8.0.0.nupkg.sha512",
+        "prometheus-net.aspnetcore.nuspec"
+      ]
+    },
+    "Prometheus.Client/5.2.0": {
+      "sha512": "9Wa4qzz9WtKmXr2Yii5sOwAaKCzxwwfMg27wrHqrejw54icwRuWRSX68QhvUFwJnCKqpXc7SpIS3kzzmcfrB8w==",
+      "type": "package",
+      "path": "prometheus.client/5.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "icon.png",
+        "lib/netstandard2.0/Prometheus.Client.dll",
+        "lib/netstandard2.0/Prometheus.Client.xml",
+        "lib/netstandard2.1/Prometheus.Client.dll",
+        "lib/netstandard2.1/Prometheus.Client.xml",
+        "prometheus.client.5.2.0.nupkg.sha512",
+        "prometheus.client.nuspec"
+      ]
+    },
+    "Prometheus.Client.Abstractions/5.2.0": {
+      "sha512": "ROwoYLSTmodSTQLQWrqVLNh4ZZyXAA+0wPGKM+1dhCGUPJQm5qjrKMhMVL8Fy6waEU1CFtf+0nLeIsvdDCUFAQ==",
+      "type": "package",
+      "path": "prometheus.client.abstractions/5.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "icon.png",
+        "lib/netstandard2.0/Prometheus.Client.Abstractions.dll",
+        "lib/netstandard2.0/Prometheus.Client.Abstractions.xml",
+        "lib/netstandard2.1/Prometheus.Client.Abstractions.dll",
+        "lib/netstandard2.1/Prometheus.Client.Abstractions.xml",
+        "prometheus.client.abstractions.5.2.0.nupkg.sha512",
+        "prometheus.client.abstractions.nuspec"
       ]
     },
     "SharpCompress/0.30.1": {
@@ -6542,10 +6712,20 @@
       "path": "../GrpcServices/GrpcServices.csproj",
       "msbuildProject": "../GrpcServices/GrpcServices.csproj"
     },
+    "Metrics/1.0.0": {
+      "type": "project",
+      "path": "../Metrics/Metrics.csproj",
+      "msbuildProject": "../Metrics/Metrics.csproj"
+    },
     "Migration/1.0.0": {
       "type": "project",
       "path": "../Migration/Migration.csproj",
       "msbuildProject": "../Migration/Migration.csproj"
+    },
+    "Options/1.0.0": {
+      "type": "project",
+      "path": "../Options/Options.csproj",
+      "msbuildProject": "../Options/Options.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -6557,9 +6737,13 @@
       "Grpc.AspNetCore.Server.Reflection >= 2.52.0",
       "GrpcServices >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 7.0.0",
+      "Microsoft.Extensions.Options >= 7.0.1",
       "Migration >= 1.0.0",
       "Npgsql >= 7.0.2",
-      "Swashbuckle.AspNetCore >= 6.4.0"
+      "Options >= 1.0.0",
+      "Swashbuckle.AspNetCore >= 6.4.0",
+      "prometheus-net >= 8.0.0",
+      "prometheus-net.AspNetCore >= 8.0.0"
     ]
   },
   "packageFolders": {
@@ -6568,11 +6752,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/polina/RiderProjects/AnalysisResultStorage/Endpoint/Endpoint.csproj",
+      "projectUniqueName": "/Users/polina/Documents/GitHub/AnalysisResultStorage/Endpoint/Endpoint.csproj",
       "projectName": "Endpoint",
-      "projectPath": "/Users/polina/RiderProjects/AnalysisResultStorage/Endpoint/Endpoint.csproj",
+      "projectPath": "/Users/polina/Documents/GitHub/AnalysisResultStorage/Endpoint/Endpoint.csproj",
       "packagesPath": "/Users/polina/.nuget/packages/",
-      "outputPath": "/Users/polina/RiderProjects/AnalysisResultStorage/Endpoint/obj/",
+      "outputPath": "/Users/polina/Documents/GitHub/AnalysisResultStorage/Endpoint/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/polina/.nuget/NuGet/NuGet.Config"
@@ -6587,14 +6771,17 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "/Users/polina/RiderProjects/AnalysisResultStorage/Consumers/Consumers.csproj": {
-              "projectPath": "/Users/polina/RiderProjects/AnalysisResultStorage/Consumers/Consumers.csproj"
+            "/Users/polina/Documents/GitHub/AnalysisResultStorage/Consumers/Consumers.csproj": {
+              "projectPath": "/Users/polina/Documents/GitHub/AnalysisResultStorage/Consumers/Consumers.csproj"
             },
-            "/Users/polina/RiderProjects/AnalysisResultStorage/GrpcServices/GrpcServices.csproj": {
-              "projectPath": "/Users/polina/RiderProjects/AnalysisResultStorage/GrpcServices/GrpcServices.csproj"
+            "/Users/polina/Documents/GitHub/AnalysisResultStorage/GrpcServices/GrpcServices.csproj": {
+              "projectPath": "/Users/polina/Documents/GitHub/AnalysisResultStorage/GrpcServices/GrpcServices.csproj"
             },
-            "/Users/polina/RiderProjects/AnalysisResultStorage/Migration/Migration.csproj": {
-              "projectPath": "/Users/polina/RiderProjects/AnalysisResultStorage/Migration/Migration.csproj"
+            "/Users/polina/Documents/GitHub/AnalysisResultStorage/Migration/Migration.csproj": {
+              "projectPath": "/Users/polina/Documents/GitHub/AnalysisResultStorage/Migration/Migration.csproj"
+            },
+            "/Users/polina/Documents/GitHub/AnalysisResultStorage/Options/Options.csproj": {
+              "projectPath": "/Users/polina/Documents/GitHub/AnalysisResultStorage/Options/Options.csproj"
             }
           }
         }
@@ -6629,6 +6816,10 @@
             "target": "Package",
             "version": "[7.0.0, )"
           },
+          "Microsoft.Extensions.Options": {
+            "target": "Package",
+            "version": "[7.0.1, )"
+          },
           "Npgsql": {
             "target": "Package",
             "version": "[7.0.2, )"
@@ -6636,6 +6827,14 @@
           "Swashbuckle.AspNetCore": {
             "target": "Package",
             "version": "[6.4.0, )"
+          },
+          "prometheus-net": {
+            "target": "Package",
+            "version": "[8.0.0, )"
+          },
+          "prometheus-net.AspNetCore": {
+            "target": "Package",
+            "version": "[8.0.0, )"
           }
         },
         "imports": [

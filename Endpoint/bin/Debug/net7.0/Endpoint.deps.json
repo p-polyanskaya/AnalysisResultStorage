@@ -15,9 +15,13 @@
           "Grpc.AspNetCore.Server.Reflection": "2.52.0",
           "GrpcServices": "1.0.0",
           "Microsoft.AspNetCore.OpenApi": "7.0.0",
+          "Microsoft.Extensions.Options": "7.0.1",
           "Migration": "1.0.0",
           "Npgsql": "7.0.2",
-          "Swashbuckle.AspNetCore": "6.4.0"
+          "Options": "1.0.0",
+          "Swashbuckle.AspNetCore": "6.4.0",
+          "prometheus-net": "8.0.0",
+          "prometheus-net.AspNetCore": "8.0.0"
         },
         "runtime": {
           "Endpoint.dll": {}
@@ -396,7 +400,7 @@
       "Grpc.Net.ClientFactory/2.52.0": {
         "dependencies": {
           "Grpc.Net.Client": "2.52.0",
-          "Microsoft.Extensions.Http": "3.0.3"
+          "Microsoft.Extensions.Http": "3.1.0"
         },
         "runtime": {
           "lib/net7.0/Grpc.Net.ClientFactory.dll": {
@@ -676,7 +680,7 @@
         "dependencies": {
           "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
           "Microsoft.AspNetCore.WebUtilities": "2.2.0",
-          "Microsoft.Extensions.ObjectPool": "2.2.0",
+          "Microsoft.Extensions.ObjectPool": "7.0.0",
           "Microsoft.Extensions.Options": "7.0.1",
           "Microsoft.Net.Http.Headers": "2.2.0"
         }
@@ -723,7 +727,7 @@
           "Microsoft.AspNetCore.Http.Extensions": "2.2.0",
           "Microsoft.AspNetCore.Routing.Abstractions": "2.2.0",
           "Microsoft.Extensions.Logging.Abstractions": "7.0.0",
-          "Microsoft.Extensions.ObjectPool": "2.2.0",
+          "Microsoft.Extensions.ObjectPool": "7.0.0",
           "Microsoft.Extensions.Options": "7.0.1"
         }
       },
@@ -997,7 +1001,7 @@
           "Microsoft.Extensions.FileProviders.Abstractions": "7.0.0"
         }
       },
-      "Microsoft.Extensions.Http/3.0.3": {
+      "Microsoft.Extensions.Http/3.1.0": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0",
           "Microsoft.Extensions.Logging": "7.0.0",
@@ -1061,7 +1065,7 @@
           "System.Text.Json": "7.0.0"
         }
       },
-      "Microsoft.Extensions.ObjectPool/2.2.0": {},
+      "Microsoft.Extensions.ObjectPool/7.0.0": {},
       "Microsoft.Extensions.Options/7.0.1": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0",
@@ -1265,6 +1269,48 @@
           "lib/net7.0/Npgsql.dll": {
             "assemblyVersion": "7.0.2.0",
             "fileVersion": "7.0.2.0"
+          }
+        }
+      },
+      "prometheus-net/8.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Http": "3.1.0",
+          "Microsoft.Extensions.ObjectPool": "7.0.0"
+        },
+        "runtime": {
+          "lib/net7.0/Prometheus.NetStandard.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.0.0"
+          }
+        }
+      },
+      "prometheus-net.AspNetCore/8.0.0": {
+        "dependencies": {
+          "prometheus-net": "8.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/Prometheus.AspNetCore.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.0.0"
+          }
+        }
+      },
+      "Prometheus.Client/5.2.0": {
+        "dependencies": {
+          "Prometheus.Client.Abstractions": "5.2.0"
+        },
+        "runtime": {
+          "lib/netstandard2.1/Prometheus.Client.dll": {
+            "assemblyVersion": "5.2.0.0",
+            "fileVersion": "5.2.0.0"
+          }
+        }
+      },
+      "Prometheus.Client.Abstractions/5.2.0": {
+        "runtime": {
+          "lib/netstandard2.1/Prometheus.Client.Abstractions.dll": {
+            "assemblyVersion": "5.2.0.0",
+            "fileVersion": "5.2.0.0"
           }
         }
       },
@@ -1488,7 +1534,9 @@
           "CSharpFunctionalExtensions": "2.38.1",
           "Domain": "1.0.0",
           "MediatR": "12.0.1",
-          "MongoDB.Driver": "2.19.1"
+          "Metrics": "1.0.0",
+          "MongoDB.Driver": "2.19.1",
+          "Options": "1.0.0"
         },
         "runtime": {
           "Application.dll": {}
@@ -1507,6 +1555,9 @@
         }
       },
       "Domain/1.0.0": {
+        "dependencies": {
+          "MongoDB.Bson": "2.19.1"
+        },
         "runtime": {
           "Domain.dll": {}
         }
@@ -1523,6 +1574,15 @@
           "GrpcServices.dll": {}
         }
       },
+      "Metrics/1.0.0": {
+        "dependencies": {
+          "Prometheus.Client": "5.2.0",
+          "prometheus-net.AspNetCore": "8.0.0"
+        },
+        "runtime": {
+          "Metrics.dll": {}
+        }
+      },
       "Migration/1.0.0": {
         "dependencies": {
           "FluentMigrator": "3.3.2",
@@ -1532,6 +1592,11 @@
         },
         "runtime": {
           "Migration.dll": {}
+        }
+      },
+      "Options/1.0.0": {
+        "runtime": {
+          "Options.dll": {}
         }
       }
     }
@@ -2123,12 +2188,12 @@
       "path": "microsoft.extensions.hosting.abstractions/7.0.0",
       "hashPath": "microsoft.extensions.hosting.abstractions.7.0.0.nupkg.sha512"
     },
-    "Microsoft.Extensions.Http/3.0.3": {
+    "Microsoft.Extensions.Http/3.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-dcyB8szIcSynjVZRuFgqkZpPgTc5zeRSj1HMXSmNqWbHYKiPYJl8ZQgBHz6wmZNSUUNGpCs5uxUg8DZHHDC1Ew==",
-      "path": "microsoft.extensions.http/3.0.3",
-      "hashPath": "microsoft.extensions.http.3.0.3.nupkg.sha512"
+      "sha512": "sha512-DLigdcV0nYaT6/ly0rnfP80BnXq8NNd/h8/SkfY39uio7Bd9LauVntp6RcRh1Kj23N+uf80GgL7Win6P3BCtoQ==",
+      "path": "microsoft.extensions.http/3.1.0",
+      "hashPath": "microsoft.extensions.http.3.1.0.nupkg.sha512"
     },
     "Microsoft.Extensions.Logging/7.0.0": {
       "type": "package",
@@ -2179,12 +2244,12 @@
       "path": "microsoft.extensions.logging.eventsource/7.0.0",
       "hashPath": "microsoft.extensions.logging.eventsource.7.0.0.nupkg.sha512"
     },
-    "Microsoft.Extensions.ObjectPool/2.2.0": {
+    "Microsoft.Extensions.ObjectPool/7.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-gA8H7uQOnM5gb+L0uTNjViHYr+hRDqCdfugheGo/MxQnuHzmhhzCBTIPm19qL1z1Xe0NEMabfcOBGv9QghlZ8g==",
-      "path": "microsoft.extensions.objectpool/2.2.0",
-      "hashPath": "microsoft.extensions.objectpool.2.2.0.nupkg.sha512"
+      "sha512": "sha512-udvKco0sAVgYGTBnHUb0tY9JQzJ/nPDiv/8PIyz69wl1AibeCDZOLVVI+6156dPfHmJH7ws5oUJRiW4ZmAvuuA==",
+      "path": "microsoft.extensions.objectpool/7.0.0",
+      "hashPath": "microsoft.extensions.objectpool.7.0.0.nupkg.sha512"
     },
     "Microsoft.Extensions.Options/7.0.1": {
       "type": "package",
@@ -2318,6 +2383,34 @@
       "sha512": "sha512-/k12hfmg4PI0IU2UTLN6n0s/FKUfox8+RdWtzgADYZoyks7GH82WLyXm27eeqatsi/nmiK9lO3HyULlTD87szg==",
       "path": "npgsql/7.0.2",
       "hashPath": "npgsql.7.0.2.nupkg.sha512"
+    },
+    "prometheus-net/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tUz6ScbA4J193hT1xUxTXQuEAZj8b5YUUrdUVIEXb6yYOZZEvPzs4zqFqI2iJW6aLmldMEiUqCFq93EOLvqITA==",
+      "path": "prometheus-net/8.0.0",
+      "hashPath": "prometheus-net.8.0.0.nupkg.sha512"
+    },
+    "prometheus-net.AspNetCore/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XNeeTpq9DMWOQC9t4yu4sYRE7WqRn9CrHi916gV8n4Zwe5kzFqGt5H2FnIm7LLGw2edndU2AtdlYs9bJ2AmVuQ==",
+      "path": "prometheus-net.aspnetcore/8.0.0",
+      "hashPath": "prometheus-net.aspnetcore.8.0.0.nupkg.sha512"
+    },
+    "Prometheus.Client/5.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9Wa4qzz9WtKmXr2Yii5sOwAaKCzxwwfMg27wrHqrejw54icwRuWRSX68QhvUFwJnCKqpXc7SpIS3kzzmcfrB8w==",
+      "path": "prometheus.client/5.2.0",
+      "hashPath": "prometheus.client.5.2.0.nupkg.sha512"
+    },
+    "Prometheus.Client.Abstractions/5.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ROwoYLSTmodSTQLQWrqVLNh4ZZyXAA+0wPGKM+1dhCGUPJQm5qjrKMhMVL8Fy6waEU1CFtf+0nLeIsvdDCUFAQ==",
+      "path": "prometheus.client.abstractions/5.2.0",
+      "hashPath": "prometheus.client.abstractions.5.2.0.nupkg.sha512"
     },
     "SharpCompress/0.30.1": {
       "type": "package",
@@ -2556,7 +2649,17 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Metrics/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "Migration/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Options/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

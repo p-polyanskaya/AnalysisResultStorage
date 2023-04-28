@@ -1,11 +1,95 @@
 {
   "version": 3,
   "targets": {
-    "net7.0": {}
+    "net7.0": {
+      "MongoDB.Bson/2.19.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "5.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.1/MongoDB.Bson.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/MongoDB.Bson.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/5.0.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.1/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "MongoDB.Bson/2.19.1": {
+      "sha512": "4FSR3eAbJEYMmvQ1pNFImUpFGtGHT+kEw/Yw/KZjxC9iFMj1XcZC08wMbezgRga2F9tNNFG2vDqh9zt01GinMA==",
+      "type": "package",
+      "path": "mongodb.bson/2.19.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "License.txt",
+        "lib/net472/MongoDB.Bson.dll",
+        "lib/net472/MongoDB.Bson.xml",
+        "lib/netstandard2.0/MongoDB.Bson.dll",
+        "lib/netstandard2.0/MongoDB.Bson.xml",
+        "lib/netstandard2.1/MongoDB.Bson.dll",
+        "lib/netstandard2.1/MongoDB.Bson.xml",
+        "mongodb.bson.2.19.1.nupkg.sha512",
+        "mongodb.bson.nuspec",
+        "packageIcon.png"
+      ]
+    },
+    "System.Runtime.CompilerServices.Unsafe/5.0.0": {
+      "sha512": "ZD9TMpsmYJLrxbbmdvhwt9YEgG5WntEnZ/d1eH8JBX9LBp+Ju8BSBhUGbZMNVHHomWo2KVImJhTDl2hIgw/6MA==",
+      "type": "package",
+      "path": "system.runtime.compilerservices.unsafe/5.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net45/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/net45/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/net461/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/net461/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/netstandard2.1/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/netstandard2.1/System.Runtime.CompilerServices.Unsafe.xml",
+        "system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512",
+        "system.runtime.compilerservices.unsafe.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    "net7.0": []
+    "net7.0": [
+      "MongoDB.Bson >= 2.19.1"
+    ]
   },
   "packageFolders": {
     "/Users/polina/.nuget/packages/": {}
@@ -13,11 +97,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/polina/RiderProjects/AnalysisResultStorage/Domain/Domain.csproj",
+      "projectUniqueName": "/Users/polina/Documents/GitHub/AnalysisResultStorage/Domain/Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "/Users/polina/RiderProjects/AnalysisResultStorage/Domain/Domain.csproj",
+      "projectPath": "/Users/polina/Documents/GitHub/AnalysisResultStorage/Domain/Domain.csproj",
       "packagesPath": "/Users/polina/.nuget/packages/",
-      "outputPath": "/Users/polina/RiderProjects/AnalysisResultStorage/Domain/obj/",
+      "outputPath": "/Users/polina/Documents/GitHub/AnalysisResultStorage/Domain/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/polina/.nuget/NuGet/NuGet.Config"
@@ -43,6 +127,12 @@
     "frameworks": {
       "net7.0": {
         "targetAlias": "net7.0",
+        "dependencies": {
+          "MongoDB.Bson": {
+            "target": "Package",
+            "version": "[2.19.1, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

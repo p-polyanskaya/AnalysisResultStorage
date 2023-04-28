@@ -1,39 +1,38 @@
-using CSharpFunctionalExtensions;
 using Domain;
 using MediatR;
+using Microsoft.Extensions.Options;
 using MongoDB.Driver;
+using Options;
 
 namespace Application;
 
 public static class GetAnalysisResultByDateRangeQuery
 {
-    public record Request(DateTime Start, DateTime End, AnalysisResultType Type) : IRequest<IReadOnlyCollection<AnalysisResult>>;
+    public record Request(DateTime Start, DateTime End, string? Topic) : IRequest<IReadOnlyCollection<AnalysisResultMongo>>;
 
-    public class Handler : IRequestHandler<Request, IReadOnlyCollection<AnalysisResult>>
+    public class Handler : IRequestHandler<Request, IReadOnlyCollection<AnalysisResultMongo>>
     {
         private readonly IMongoClient _mongoClient;
+        private readonly IOptions<MongoSettings> _mongoSettings;
 
-        public Handler(IMongoClient mongoClient)
+        public Handler(IMongoClient mongoClient, IOptions<MongoSettings> mongoSettings)
         {
             _mongoClient = mongoClient;
+            _mongoSettings = mongoSettings;
         }
 
-        public async Task<IReadOnlyCollection<AnalysisResult>> Handle(Request request, CancellationToken cancellationToken)
+        public async Task<IReadOnlyCollection<AnalysisResultMongo>> Handle(Request request, CancellationToken cancellationToken)
         {
-            var db = _mongoClient.GetDatabase("myDB10");
-            var collection = db.GetCollection<AnalysisResult>("myCol");
+            var db = _mongoClient.GetDatabase(_mongoSettings.Value.DataBase);
+            var collection = db.GetCollection<AnalysisResultMongo>(_mongoSettings.Value.Collection);
 
-            var dateFilter = Builders<AnalysisResult>.Filter.Gt(p => p.TimeOfMessage, request.Start) &
-                             Builders<AnalysisResult>.Filter.Lt(p => p.TimeOfMessage, request.End);
-            var filter = (int)request.Type switch
+            var filter = Builders<AnalysisResultMongo>.Filter.Gt(p => p.TimeOfMessage, request.Start) &
+                             Builders<AnalysisResultMongo>.Filter.Lt(p => p.TimeOfMessage, request.End);
+
+            if (request.Topic != "")
             {
-                0 => dateFilter &
-                     Builders<AnalysisResult>.Filter.Eq(p => p.IsSuspiciousMessage, true),
-                1 => dateFilter &
-                     Builders<AnalysisResult>.Filter.Eq(p => p.IsSuspiciousMessage, false),
-                2 => dateFilter,
-                _ => throw new ArgumentOutOfRangeException()
-            };
+                filter &= Builders<AnalysisResultMongo>.Filter.Eq(p => p.Topic, request.Topic);
+            }
 
             var res = await collection
                 .Find(filter)

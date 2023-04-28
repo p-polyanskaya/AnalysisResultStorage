@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/polina/RiderProjects/AnalysisResultStorage/Endpoint/Endpoint.csproj": {}
+    "/Users/polina/Documents/GitHub/AnalysisResultStorage/Endpoint/Endpoint.csproj": {}
   },
   "projects": {
-    "/Users/polina/RiderProjects/AnalysisResultStorage/Application/Application.csproj": {
+    "/Users/polina/Documents/GitHub/AnalysisResultStorage/Application/Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/polina/RiderProjects/AnalysisResultStorage/Application/Application.csproj",
+        "projectUniqueName": "/Users/polina/Documents/GitHub/AnalysisResultStorage/Application/Application.csproj",
         "projectName": "Application",
-        "projectPath": "/Users/polina/RiderProjects/AnalysisResultStorage/Application/Application.csproj",
+        "projectPath": "/Users/polina/Documents/GitHub/AnalysisResultStorage/Application/Application.csproj",
         "packagesPath": "/Users/polina/.nuget/packages/",
-        "outputPath": "/Users/polina/RiderProjects/AnalysisResultStorage/Application/obj/",
+        "outputPath": "/Users/polina/Documents/GitHub/AnalysisResultStorage/Application/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/polina/.nuget/NuGet/NuGet.Config"
@@ -26,8 +26,14 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/Users/polina/RiderProjects/AnalysisResultStorage/Domain/Domain.csproj": {
-                "projectPath": "/Users/polina/RiderProjects/AnalysisResultStorage/Domain/Domain.csproj"
+              "/Users/polina/Documents/GitHub/AnalysisResultStorage/Domain/Domain.csproj": {
+                "projectPath": "/Users/polina/Documents/GitHub/AnalysisResultStorage/Domain/Domain.csproj"
+              },
+              "/Users/polina/Documents/GitHub/AnalysisResultStorage/Metrics/Metrics.csproj": {
+                "projectPath": "/Users/polina/Documents/GitHub/AnalysisResultStorage/Metrics/Metrics.csproj"
+              },
+              "/Users/polina/Documents/GitHub/AnalysisResultStorage/Options/Options.csproj": {
+                "projectPath": "/Users/polina/Documents/GitHub/AnalysisResultStorage/Options/Options.csproj"
               }
             }
           }
@@ -75,14 +81,14 @@
         }
       }
     },
-    "/Users/polina/RiderProjects/AnalysisResultStorage/Consumers/Consumers.csproj": {
+    "/Users/polina/Documents/GitHub/AnalysisResultStorage/Consumers/Consumers.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/polina/RiderProjects/AnalysisResultStorage/Consumers/Consumers.csproj",
+        "projectUniqueName": "/Users/polina/Documents/GitHub/AnalysisResultStorage/Consumers/Consumers.csproj",
         "projectName": "Consumers",
-        "projectPath": "/Users/polina/RiderProjects/AnalysisResultStorage/Consumers/Consumers.csproj",
+        "projectPath": "/Users/polina/Documents/GitHub/AnalysisResultStorage/Consumers/Consumers.csproj",
         "packagesPath": "/Users/polina/.nuget/packages/",
-        "outputPath": "/Users/polina/RiderProjects/AnalysisResultStorage/Consumers/obj/",
+        "outputPath": "/Users/polina/Documents/GitHub/AnalysisResultStorage/Consumers/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/polina/.nuget/NuGet/NuGet.Config"
@@ -97,11 +103,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/Users/polina/RiderProjects/AnalysisResultStorage/Application/Application.csproj": {
-                "projectPath": "/Users/polina/RiderProjects/AnalysisResultStorage/Application/Application.csproj"
+              "/Users/polina/Documents/GitHub/AnalysisResultStorage/Application/Application.csproj": {
+                "projectPath": "/Users/polina/Documents/GitHub/AnalysisResultStorage/Application/Application.csproj"
               },
-              "/Users/polina/RiderProjects/AnalysisResultStorage/Domain/Domain.csproj": {
-                "projectPath": "/Users/polina/RiderProjects/AnalysisResultStorage/Domain/Domain.csproj"
+              "/Users/polina/Documents/GitHub/AnalysisResultStorage/Domain/Domain.csproj": {
+                "projectPath": "/Users/polina/Documents/GitHub/AnalysisResultStorage/Domain/Domain.csproj"
               }
             }
           }
@@ -149,14 +155,14 @@
         }
       }
     },
-    "/Users/polina/RiderProjects/AnalysisResultStorage/Domain/Domain.csproj": {
+    "/Users/polina/Documents/GitHub/AnalysisResultStorage/Domain/Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/polina/RiderProjects/AnalysisResultStorage/Domain/Domain.csproj",
+        "projectUniqueName": "/Users/polina/Documents/GitHub/AnalysisResultStorage/Domain/Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "/Users/polina/RiderProjects/AnalysisResultStorage/Domain/Domain.csproj",
+        "projectPath": "/Users/polina/Documents/GitHub/AnalysisResultStorage/Domain/Domain.csproj",
         "packagesPath": "/Users/polina/.nuget/packages/",
-        "outputPath": "/Users/polina/RiderProjects/AnalysisResultStorage/Domain/obj/",
+        "outputPath": "/Users/polina/Documents/GitHub/AnalysisResultStorage/Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/polina/.nuget/NuGet/NuGet.Config"
@@ -182,6 +188,12 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "MongoDB.Bson": {
+              "target": "Package",
+              "version": "[2.19.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -202,14 +214,14 @@
         }
       }
     },
-    "/Users/polina/RiderProjects/AnalysisResultStorage/Endpoint/Endpoint.csproj": {
+    "/Users/polina/Documents/GitHub/AnalysisResultStorage/Endpoint/Endpoint.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/polina/RiderProjects/AnalysisResultStorage/Endpoint/Endpoint.csproj",
+        "projectUniqueName": "/Users/polina/Documents/GitHub/AnalysisResultStorage/Endpoint/Endpoint.csproj",
         "projectName": "Endpoint",
-        "projectPath": "/Users/polina/RiderProjects/AnalysisResultStorage/Endpoint/Endpoint.csproj",
+        "projectPath": "/Users/polina/Documents/GitHub/AnalysisResultStorage/Endpoint/Endpoint.csproj",
         "packagesPath": "/Users/polina/.nuget/packages/",
-        "outputPath": "/Users/polina/RiderProjects/AnalysisResultStorage/Endpoint/obj/",
+        "outputPath": "/Users/polina/Documents/GitHub/AnalysisResultStorage/Endpoint/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/polina/.nuget/NuGet/NuGet.Config"
@@ -224,14 +236,17 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/Users/polina/RiderProjects/AnalysisResultStorage/Consumers/Consumers.csproj": {
-                "projectPath": "/Users/polina/RiderProjects/AnalysisResultStorage/Consumers/Consumers.csproj"
+              "/Users/polina/Documents/GitHub/AnalysisResultStorage/Consumers/Consumers.csproj": {
+                "projectPath": "/Users/polina/Documents/GitHub/AnalysisResultStorage/Consumers/Consumers.csproj"
               },
-              "/Users/polina/RiderProjects/AnalysisResultStorage/GrpcServices/GrpcServices.csproj": {
-                "projectPath": "/Users/polina/RiderProjects/AnalysisResultStorage/GrpcServices/GrpcServices.csproj"
+              "/Users/polina/Documents/GitHub/AnalysisResultStorage/GrpcServices/GrpcServices.csproj": {
+                "projectPath": "/Users/polina/Documents/GitHub/AnalysisResultStorage/GrpcServices/GrpcServices.csproj"
               },
-              "/Users/polina/RiderProjects/AnalysisResultStorage/Migration/Migration.csproj": {
-                "projectPath": "/Users/polina/RiderProjects/AnalysisResultStorage/Migration/Migration.csproj"
+              "/Users/polina/Documents/GitHub/AnalysisResultStorage/Migration/Migration.csproj": {
+                "projectPath": "/Users/polina/Documents/GitHub/AnalysisResultStorage/Migration/Migration.csproj"
+              },
+              "/Users/polina/Documents/GitHub/AnalysisResultStorage/Options/Options.csproj": {
+                "projectPath": "/Users/polina/Documents/GitHub/AnalysisResultStorage/Options/Options.csproj"
               }
             }
           }
@@ -266,6 +281,10 @@
               "target": "Package",
               "version": "[7.0.0, )"
             },
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            },
             "Npgsql": {
               "target": "Package",
               "version": "[7.0.2, )"
@@ -273,6 +292,14 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.4.0, )"
+            },
+            "prometheus-net": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "prometheus-net.AspNetCore": {
+              "target": "Package",
+              "version": "[8.0.0, )"
             }
           },
           "imports": [
@@ -298,14 +325,14 @@
         }
       }
     },
-    "/Users/polina/RiderProjects/AnalysisResultStorage/GrpcServices/GrpcServices.csproj": {
+    "/Users/polina/Documents/GitHub/AnalysisResultStorage/GrpcServices/GrpcServices.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/polina/RiderProjects/AnalysisResultStorage/GrpcServices/GrpcServices.csproj",
+        "projectUniqueName": "/Users/polina/Documents/GitHub/AnalysisResultStorage/GrpcServices/GrpcServices.csproj",
         "projectName": "GrpcServices",
-        "projectPath": "/Users/polina/RiderProjects/AnalysisResultStorage/GrpcServices/GrpcServices.csproj",
+        "projectPath": "/Users/polina/Documents/GitHub/AnalysisResultStorage/GrpcServices/GrpcServices.csproj",
         "packagesPath": "/Users/polina/.nuget/packages/",
-        "outputPath": "/Users/polina/RiderProjects/AnalysisResultStorage/GrpcServices/obj/",
+        "outputPath": "/Users/polina/Documents/GitHub/AnalysisResultStorage/GrpcServices/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/polina/.nuget/NuGet/NuGet.Config"
@@ -320,8 +347,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/Users/polina/RiderProjects/AnalysisResultStorage/Application/Application.csproj": {
-                "projectPath": "/Users/polina/RiderProjects/AnalysisResultStorage/Application/Application.csproj"
+              "/Users/polina/Documents/GitHub/AnalysisResultStorage/Application/Application.csproj": {
+                "projectPath": "/Users/polina/Documents/GitHub/AnalysisResultStorage/Application/Application.csproj"
               }
             }
           }
@@ -379,14 +406,77 @@
         }
       }
     },
-    "/Users/polina/RiderProjects/AnalysisResultStorage/Migration/Migration.csproj": {
+    "/Users/polina/Documents/GitHub/AnalysisResultStorage/Metrics/Metrics.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/polina/RiderProjects/AnalysisResultStorage/Migration/Migration.csproj",
-        "projectName": "Migration",
-        "projectPath": "/Users/polina/RiderProjects/AnalysisResultStorage/Migration/Migration.csproj",
+        "projectUniqueName": "/Users/polina/Documents/GitHub/AnalysisResultStorage/Metrics/Metrics.csproj",
+        "projectName": "Metrics",
+        "projectPath": "/Users/polina/Documents/GitHub/AnalysisResultStorage/Metrics/Metrics.csproj",
         "packagesPath": "/Users/polina/.nuget/packages/",
-        "outputPath": "/Users/polina/RiderProjects/AnalysisResultStorage/Migration/obj/",
+        "outputPath": "/Users/polina/Documents/GitHub/AnalysisResultStorage/Metrics/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/polina/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Prometheus.Client": {
+              "target": "Package",
+              "version": "[5.2.0, )"
+            },
+            "prometheus-net.AspNetCore": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/Users/polina/.vscode-dotnet-sdk/.dotnet/sdk/7.0.100/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/polina/Documents/GitHub/AnalysisResultStorage/Migration/Migration.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/polina/Documents/GitHub/AnalysisResultStorage/Migration/Migration.csproj",
+        "projectName": "Migration",
+        "projectPath": "/Users/polina/Documents/GitHub/AnalysisResultStorage/Migration/Migration.csproj",
+        "packagesPath": "/Users/polina/.nuget/packages/",
+        "outputPath": "/Users/polina/Documents/GitHub/AnalysisResultStorage/Migration/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/polina/.nuget/NuGet/NuGet.Config"
@@ -430,6 +520,59 @@
               "version": "[7.0.0, )"
             }
           },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/Users/polina/.vscode-dotnet-sdk/.dotnet/sdk/7.0.100/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/polina/Documents/GitHub/AnalysisResultStorage/Options/Options.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/polina/Documents/GitHub/AnalysisResultStorage/Options/Options.csproj",
+        "projectName": "Options",
+        "projectPath": "/Users/polina/Documents/GitHub/AnalysisResultStorage/Options/Options.csproj",
+        "packagesPath": "/Users/polina/.nuget/packages/",
+        "outputPath": "/Users/polina/Documents/GitHub/AnalysisResultStorage/Options/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/polina/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
           "imports": [
             "net461",
             "net462",

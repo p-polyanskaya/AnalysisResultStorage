@@ -1,39 +1,34 @@
-using System.Diagnostics;
-using CSharpFunctionalExtensions;
 using Domain;
 using MediatR;
+using Microsoft.Extensions.Options;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization;
 using MongoDB.Driver;
+using Options;
 
 namespace Application;
 
 public static class GetAnalysisResultBySourceQuery
 {
-    public record Request(string Source, AnalysisResultType Type) : IRequest<IReadOnlyCollection<AnalysisResult>>;
+    public record Request(string Source) : IRequest<IReadOnlyCollection<AnalysisResultMongo>>;
 
-    public class Handler : IRequestHandler<Request, IReadOnlyCollection<AnalysisResult>>
+    public class Handler : IRequestHandler<Request, IReadOnlyCollection<AnalysisResultMongo>>
     {
         private readonly IMongoClient _mongoClient;
+        private readonly IOptions<MongoSettings> _mongoSettings;
 
-        public Handler(IMongoClient mongoClient)
+        public Handler(IMongoClient mongoClient, IOptions<MongoSettings> mongoSettings)
         {
             _mongoClient = mongoClient;
+            _mongoSettings = mongoSettings;
         }
         
-        public async Task<IReadOnlyCollection<AnalysisResult>> Handle(Request request, CancellationToken cancellationToken)
+        public async Task<IReadOnlyCollection<AnalysisResultMongo>> Handle(Request request, CancellationToken cancellationToken)
         {
-            var db = _mongoClient.GetDatabase("myDB10");
-            var collection = db.GetCollection<AnalysisResult>("myCol");
+            var db = _mongoClient.GetDatabase(_mongoSettings.Value.DataBase);
+            var collection = db.GetCollection<AnalysisResultMongo>(_mongoSettings.Value.Collection);
 
-            var sourceFilter = Builders<AnalysisResult>.Filter.Eq(p => p.Source, request.Source);
-            var filter = (int)request.Type switch
-            {
-                0 => sourceFilter & 
-                     Builders<AnalysisResult>.Filter.Eq(p => p.IsSuspiciousMessage, true),
-                1 => sourceFilter & 
-                     Builders<AnalysisResult>.Filter.Eq(p => p.IsSuspiciousMessage, false),
-                2 => sourceFilter,
-                _ => throw new ArgumentOutOfRangeException()
-            };
+            var filter = Builders<AnalysisResultMongo>.Filter.Eq(p => p.Source, request.Source);
 
             var res = await collection
                 .Find(filter)
