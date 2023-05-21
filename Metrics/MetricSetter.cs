@@ -4,18 +4,18 @@ namespace Metrics;
 
 public class MetricSetter
 {
-    private readonly Counter _suspiciousMessagesBySource;
+    private readonly Counter _newsByTopic;
     
     public MetricSetter()
     {
-        _suspiciousMessagesBySource = Prometheus.Metrics.CreateCounter(
-            "number_of_news_by_source",
-            "Число новостей по источнику",
-            "source");
+        _newsByTopic = Prometheus.Metrics.CreateCounter(
+            "number_of_news_by_topic",
+            "Число новостей по теме",
+            "topic");
     }
 
-    public void IncSuspiciousMessageCount(string source)
+    public void IncNewsCountByTopic(string topic)
     {
-        _suspiciousMessagesBySource.WithLabels(source).Inc();
+        _newsByTopic.WithLabels(topic).Inc();
     }
 }

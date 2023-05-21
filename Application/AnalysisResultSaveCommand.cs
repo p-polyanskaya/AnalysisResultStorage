@@ -23,7 +23,7 @@ public static class AnalysisResultSaveCommand
             _metricSetter = metricSetter;
             _mongoSettings = mongoSettings;
         }
-        
+
         public async Task<Unit> Handle(Request request, CancellationToken cancellationToken)
         {
             var db = _mongoClient.GetDatabase(_mongoSettings.Value.DataBase);
@@ -38,18 +38,31 @@ public static class AnalysisResultSaveCommand
                 TimeOfMessage = request.AnalysisResult.Message.TimeOfMessage,
                 Topic = request.AnalysisResult.Topic
             };
-            
+
             try
             {
-                await collection.InsertOneAsync(analysisResult, new InsertOneOptions(), cancellationToken);
+                var filter =
+                    Builders<AnalysisResultMongo>.Filter.Eq(p => p.Id, request.AnalysisResult.Message.Id.ToString());
+                var res = await collection
+                    .Find(filter)
+                    .ToListAsync(cancellationToken: cancellationToken);
+
+                if (!res.Any())
+                {
+                    await collection.InsertOneAsync(analysisResult, new InsertOneOptions(), cancellationToken);
+                }
+                else
+                {
+                    Console.WriteLine("Уже есть в бд сообщение с id - " + res.First().Id);
+                }
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex);
             }
 
-            _metricSetter.IncSuspiciousMessageCount("source");//request.AnalysisResult.Source);
-            
+            _metricSetter.IncNewsCountByTopic(request.AnalysisResult.Topic);
+
 
             return Unit.Value;
         }

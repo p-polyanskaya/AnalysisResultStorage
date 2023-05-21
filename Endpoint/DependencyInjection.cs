@@ -1,7 +1,5 @@
 using Domain;
-using FluentMigrator.Runner;
 using Microsoft.Extensions.Options;
-using Migration;
 using MongoDB.Driver;
 using Options;
 
@@ -19,17 +17,5 @@ public static class DependencyInjection
         await collection.Indexes.CreateOneAsync(new CreateIndexModel<AnalysisResultMongo>(keys));
     
         services.AddSingleton<IMongoClient>(s => mongoClient);
-    }
-
-    public static void SetPostgres(this IServiceCollection services)
-    {
-        services
-            .AddFluentMigratorCore()
-            .ConfigureRunner(rb => rb
-                .AddPostgres()
-                .WithGlobalConnectionString(
-                    "Server=127.0.0.1;Port=5432;Userid=postgres;Password=postgres;Database=course_db")
-                .ScanIn(typeof(CreatePostgresTable).Assembly).For.Migrations())
-            .AddLogging(lb => lb.AddFluentMigratorConsole());
     }
 }

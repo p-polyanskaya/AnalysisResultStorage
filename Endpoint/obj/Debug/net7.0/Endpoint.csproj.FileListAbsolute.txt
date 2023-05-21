@@ -191,8 +191,6 @@
 /Users/polina/Documents/GitHub/AnalysisResultStorage/Endpoint/bin/Debug/net7.0/MediatR.dll
 /Users/polina/Documents/GitHub/AnalysisResultStorage/Endpoint/bin/Debug/net7.0/MediatR.Contracts.dll
 /Users/polina/Documents/GitHub/AnalysisResultStorage/Endpoint/bin/Debug/net7.0/Microsoft.AspNetCore.OpenApi.dll
-/Users/polina/Documents/GitHub/AnalysisResultStorage/Endpoint/bin/Debug/net7.0/Microsoft.AspNetCore.Server.Kestrel.Https.dll
-/Users/polina/Documents/GitHub/AnalysisResultStorage/Endpoint/bin/Debug/net7.0/Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions.dll
 /Users/polina/Documents/GitHub/AnalysisResultStorage/Endpoint/bin/Debug/net7.0/Microsoft.Data.SqlClient.dll
 /Users/polina/Documents/GitHub/AnalysisResultStorage/Endpoint/bin/Debug/net7.0/Microsoft.Extensions.Configuration.Binder.dll
 /Users/polina/Documents/GitHub/AnalysisResultStorage/Endpoint/bin/Debug/net7.0/Microsoft.Extensions.Hosting.dll
@@ -274,11 +272,9 @@
 /Users/polina/Documents/GitHub/AnalysisResultStorage/Endpoint/bin/Debug/net7.0/Domain.dll
 /Users/polina/Documents/GitHub/AnalysisResultStorage/Endpoint/bin/Debug/net7.0/GrpcServices.dll
 /Users/polina/Documents/GitHub/AnalysisResultStorage/Endpoint/bin/Debug/net7.0/Metrics.dll
-/Users/polina/Documents/GitHub/AnalysisResultStorage/Endpoint/bin/Debug/net7.0/Migration.dll
 /Users/polina/Documents/GitHub/AnalysisResultStorage/Endpoint/bin/Debug/net7.0/Options.dll
 /Users/polina/Documents/GitHub/AnalysisResultStorage/Endpoint/bin/Debug/net7.0/Consumers.pdb
 /Users/polina/Documents/GitHub/AnalysisResultStorage/Endpoint/bin/Debug/net7.0/GrpcServices.pdb
-/Users/polina/Documents/GitHub/AnalysisResultStorage/Endpoint/bin/Debug/net7.0/Migration.pdb
 /Users/polina/Documents/GitHub/AnalysisResultStorage/Endpoint/bin/Debug/net7.0/Options.pdb
 /Users/polina/Documents/GitHub/AnalysisResultStorage/Endpoint/bin/Debug/net7.0/Application.pdb
 /Users/polina/Documents/GitHub/AnalysisResultStorage/Endpoint/bin/Debug/net7.0/Domain.pdb

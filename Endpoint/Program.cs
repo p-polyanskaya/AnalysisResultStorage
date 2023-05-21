@@ -3,10 +3,8 @@ using Application;
 using Consumers;
 using GrpcServices;
 using Metrics;
-using Migration;
 using Options;
 using Prometheus;
-using IMetricFactory = Prometheus.Client.IMetricFactory;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,8 +17,7 @@ builder.Services.Configure<ConsumersSettings>(builder.Configuration.GetSection(n
 
 //настройка монго и ее индексов
 await builder.Services.SetMongo();
-//настройка миграций постгреса
-//builder.Services.SetPostgres();
+
 //настрйока медиаторов
 builder.Services.AddMediatR(x =>
     x.RegisterServicesFromAssemblies(typeof(GetAnalysisResultBySourceQuery.Handler).Assembly));
@@ -37,9 +34,6 @@ var app = builder.Build();
 //настройка grpc
 app.MapGrpcService<AnalysisResultGrpcService>();
 app.MapGrpcReflectionService();
-
-//app.Migrate();
-
 app.UseMetricServer();
 
 app.Run();

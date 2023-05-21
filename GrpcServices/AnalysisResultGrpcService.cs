@@ -48,7 +48,8 @@ public class AnalysisResultGrpcService : AnalysisResultOperation.AnalysisResultO
             Text = analysisResult.Text,
             Source = analysisResult.Source,
             TimeOfMessage = analysisResult.TimeOfMessage.ToTimestamp(),
-            Author = analysisResult.Author
+            Author = analysisResult.Author,
+            Topic = analysisResult.Topic
         };
     }
 }

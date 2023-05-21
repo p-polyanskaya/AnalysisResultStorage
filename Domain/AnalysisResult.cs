@@ -1,11 +1,7 @@
-﻿using MongoDB.Bson.Serialization.Attributes;
-
-namespace Domain;
+﻿namespace Domain;
 
 public class AnalysisResult
 {
-    [BsonId]
-    public string Id { get; set; }
     public Message Message { get; }
     public string Topic { get; }
 

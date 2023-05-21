@@ -1,10 +1,7 @@
-﻿using MongoDB.Bson.Serialization.Attributes;
-
-namespace Domain;
+﻿namespace Domain;
 
 public class Message
 {
-    [BsonId]
     public Guid Id { get; }
     public string Author { get; }
     public DateTime TimeOfMessage { get; }

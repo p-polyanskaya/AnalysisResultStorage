@@ -242,9 +242,6 @@
               "/Users/polina/Documents/GitHub/AnalysisResultStorage/GrpcServices/GrpcServices.csproj": {
                 "projectPath": "/Users/polina/Documents/GitHub/AnalysisResultStorage/GrpcServices/GrpcServices.csproj"
               },
-              "/Users/polina/Documents/GitHub/AnalysisResultStorage/Migration/Migration.csproj": {
-                "projectPath": "/Users/polina/Documents/GitHub/AnalysisResultStorage/Migration/Migration.csproj"
-              },
               "/Users/polina/Documents/GitHub/AnalysisResultStorage/Options/Options.csproj": {
                 "projectPath": "/Users/polina/Documents/GitHub/AnalysisResultStorage/Options/Options.csproj"
               }
@@ -447,77 +444,6 @@
             "prometheus-net.AspNetCore": {
               "target": "Package",
               "version": "[8.0.0, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "/Users/polina/.vscode-dotnet-sdk/.dotnet/sdk/7.0.100/RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "/Users/polina/Documents/GitHub/AnalysisResultStorage/Migration/Migration.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "/Users/polina/Documents/GitHub/AnalysisResultStorage/Migration/Migration.csproj",
-        "projectName": "Migration",
-        "projectPath": "/Users/polina/Documents/GitHub/AnalysisResultStorage/Migration/Migration.csproj",
-        "packagesPath": "/Users/polina/.nuget/packages/",
-        "outputPath": "/Users/polina/Documents/GitHub/AnalysisResultStorage/Migration/obj/",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "/Users/polina/.nuget/NuGet/NuGet.Config"
-        ],
-        "originalTargetFrameworks": [
-          "net7.0"
-        ],
-        "sources": {
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net7.0": {
-            "targetAlias": "net7.0",
-            "projectReferences": {}
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net7.0": {
-          "targetAlias": "net7.0",
-          "dependencies": {
-            "FluentMigrator": {
-              "target": "Package",
-              "version": "[3.3.2, )"
-            },
-            "FluentMigrator.Runner": {
-              "target": "Package",
-              "version": "[3.3.2, )"
-            },
-            "Microsoft.AspNetCore": {
-              "target": "Package",
-              "version": "[2.2.0, )"
-            },
-            "Microsoft.Extensions.DependencyInjection": {
-              "target": "Package",
-              "version": "[7.0.0, )"
             }
           },
           "imports": [
