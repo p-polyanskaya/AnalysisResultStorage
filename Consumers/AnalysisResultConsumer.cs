@@ -2,7 +2,6 @@
 using Confluent.Kafka;
 using Domain;
 using MediatR;
-using Metrics;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
@@ -47,7 +46,6 @@ public class AnalysisResultConsumer: BackgroundService
                 using var scope = _serviceProvider.CreateScope();
                 var mediator = scope.ServiceProvider.GetRequiredService<IMediator>();
                 await mediator.Send(request, stoppingToken);
-                Console.WriteLine(request.AnalysisResult.Message.Text);
                 consumer.Commit(consumeResult);
             }
             catch(Exception ex)
