@@ -300,3 +300,4 @@
 /Users/polina/Documents/GitHub/AnalysisResultStorage/Endpoint/obj/Debug/net7.0/Endpoint.pdb
 /Users/polina/Documents/GitHub/AnalysisResultStorage/Endpoint/obj/Debug/net7.0/Endpoint.genruntimeconfig.cache
 /Users/polina/Documents/GitHub/AnalysisResultStorage/Endpoint/obj/Debug/net7.0/ref/Endpoint.dll
+/Users/polina/Documents/GitHub/AnalysisResultStorage/Endpoint/bin/Debug/net7.0/appsettings.Staging.json

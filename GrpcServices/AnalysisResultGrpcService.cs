@@ -19,7 +19,8 @@ public class AnalysisResultGrpcService : AnalysisResultOperation.AnalysisResultO
     {
         var query = new GetAnalysisResultBySourceQuery.Request(request.Source);
         var response = await _mediator.Send(query, context.CancellationToken);
-        return new GetAnalysisResultBySourceResponse { Results = { response.Select(ToProtoAnalyseResult).ToList() } };
+        Console.WriteLine(response.Count);
+        return new GetAnalysisResultBySourceResponse { Results = { response.Select(ToProtoAnalyseResult).ToList().Take(500) } };
     }
 
     public override async Task<GetAnalysisResultByDateRangeResponse> GetAnalysisResultByDateRange(
@@ -29,7 +30,7 @@ public class AnalysisResultGrpcService : AnalysisResultOperation.AnalysisResultO
             request.Topic);
         var response = await _mediator.Send(query, context.CancellationToken);
         return new GetAnalysisResultByDateRangeResponse
-            { Results = { response.Select(ToProtoAnalyseResult).ToList() } };
+            { Results = { response.Select(ToProtoAnalyseResult).ToList().Take(500) } };
     }
 
     public override async Task<GetAnalysisResultByAuthorResponse> GetAnalysisResultByAuthor(
@@ -37,7 +38,7 @@ public class AnalysisResultGrpcService : AnalysisResultOperation.AnalysisResultO
     {
         var query = new GetAnalysisResultByAuthorQuery.Request(request.Author);
         var response = await _mediator.Send(query, context.CancellationToken);
-        return new GetAnalysisResultByAuthorResponse { Results = { response.Select(ToProtoAnalyseResult).ToList() } };
+        return new GetAnalysisResultByAuthorResponse { Results = { response.Select(ToProtoAnalyseResult).ToList().Take(500) } };
     }
 
     private static AnalyseResult ToProtoAnalyseResult(Domain.AnalysisResultMongo analysisResult)
